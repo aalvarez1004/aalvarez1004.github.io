@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The web site of aalvarez1004</title>
+    <link href="/style.css?version=1" rel="stylesheet" type="text/css" media="all">
+    <!-- Materialze - Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Materialize - Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <div class="navbar-fixed">
+      <nav class="blue">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo"><img class="logo" src="Logo.png"/></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Robòtica</a></li>
+            <li><a href="badges.html">Programació</a></li>
+            <li><a href="collapsible.html">SetmanaBio</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
