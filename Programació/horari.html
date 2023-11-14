@@ -1,1 +1,234 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horari de Matèries amb Imatges i Calendari amb Destacats</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        body {
+            text-align: center;
+            margin: 20px;
+        }
 
+        .horari-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .horari-content {
+            margin-top: 20px;
+        }
+
+        .ui-datepicker-calendar .ui-state-active,
+        .ui-datepicker-calendar .ui-widget-content .ui-state-active {
+            background-color: #007bff !important;
+            color: #fff !important;
+        }
+
+        .highlight-day {
+            background-color: #007bff !important;
+            color: #fff !important;
+            border-radius: 50%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .event-day {
+            background-color: #cce5ff !important;
+            color: #000 !important;
+            border-radius: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .today-circle {
+            border: 2px solid #00f;
+            border-radius: 50%;
+        }
+
+        .ui-datepicker-calendar .ui-state-default,
+        .ui-datepicker-calendar .ui-widget-content .ui-state-default {
+            background: none !important;
+        }
+
+        .ui-datepicker-calendar .ui-state-active,
+        .ui-datepicker-calendar .ui-widget-content .ui-state-active {
+            background-color: #007bff !important;
+            color: #fff !important;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="dia">Selecciona el dia:</label>
+    <select id="dia">
+        <option value="1">Dilluns</option>
+        <option value="2">Dimarts</option>
+        <option value="3">Dimecres</option>
+        <option value="4">Dijous</option>
+        <option value="5">Divendres</option>
+    </select>
+
+    <br>
+
+    <label for="hora">Selecciona l'hora:</label>
+    <select id="hora">
+        <option value="8:15">8:15</option>
+        <option value="9:15">9:15</option>
+        <option value="10:15">10:15</option>
+        <option value="11:45">11:45</option>
+        <option value="12:45">12:45</option>
+        <option value="13:45">13:45</option>
+    </select>
+
+    <div class="horari-container">
+        <div class="horari-content">
+            
+                
+             <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Obtén la fecha y hora actuales
+        var fechaActual = new Date();
+        var horaActual = fechaActual.getHours() + ":" + (fechaActual.getMinutes() < 10 ? '0' : '') + fechaActual.getMinutes();
+
+        // Establece la fecha y hora actuales en los selectores
+        var diaSelect = document.getElementById("dia");
+        var horaSelect = document.getElementById("hora");
+        diaSelect.value = (fechaActual.getDay() === 0 ? 7 : fechaActual.getDay()); // Ajusta el índice para que Domingo sea 7
+        horaSelect.value = horaActual;
+
+        // Resto del código
+        function obtenerBloqueHorario(hora, minutos) {
+            if (hora === 8 && minutos >= 15) return 0;
+            if (hora === 9 && minutos >= 15) return 1;
+            if (hora === 10 && minutos >= 15) return 2;
+            if (hora === 11 && minutos >= 45) return 3;
+            if (hora === 12 && minutos >= 45) return 4;
+            if (hora === 13 && minutos >= 45) return 5;
+            return null;
+        }
+
+        function actualizarAssignatura() {
+            var diaSeleccionat = diaSelect.value;
+            var horaSeleccionada = horaSelect.value;
+
+            var hora = parseInt(horaSeleccionada.split(":")[0]);
+            var minutos = parseInt(horaSeleccionada.split(":")[1]);
+
+            var bloqueHorario = obtenerBloqueHorario(hora, minutos);
+
+            if (diaSeleccionat >= 1 && diaSeleccionat <= 5 && bloqueHorario !== null) {
+                var assignatures = ["Mates", "Física", "Tecnologia", "Programació", "Llengua Castellana", "Català", "Educació física", "Mates Aplicades", "Robòtica", "Filosofia", "Tutoria", "Anglès"];
+                var imatges = ["mates.jpg", "fisica.jpg", "tecnologia.jpg", "programacio.jpg", "llengua.jpg", "catala.jpg", "educaciofisica.jpg", "matesaplicades.jpg", "reptesdefisica.jpg", "filosofia.jpg", "https://aalvarez1004.github.io/Imagenes/Tutoria.png", "angles.jpg"];
+
+                var ordreAssignatures = [
+                    [8, 2, 11, 4, 7, 6],
+                    [0, 2, 9, 5, 1, 3],
+                    [6, 7, 1, 8, 10, 3],
+                    [0, 3, 8, 2, 11, 9],
+                    [1, 4, 11, 7, 0, 5],
+                ];
+
+                var index = ordreAssignatures[diaSeleccionat - 1][bloqueHorario];
+
+                // Mostrar el nombre de la asignatura
+                document.getElementById("assignatura").innerHTML = "<h1>" + assignatures[index] + "</h1>";
+
+                // Mostrar la imagen correspondiente
+                document.getElementById("imatge").innerHTML = "<img src='" + imatges[index] + "' alt='Imatge relacionada'>";
+            } else {
+                document.getElementById("assignatura").innerHTML = "<h1>Horari no lectiu</h1>";
+                document.getElementById("imatge").innerHTML = "<img src='fuera_de_horario.jpg' alt='Imatge relacionada'>";
+            }
+        }
+
+        // Llamada inicial a la función de actualización
+        actualizarAssignatura();
+
+        // Añadir eventos de cambio a los elementos select
+        diaSelect.addEventListener("change", actualizarAssignatura);
+        horaSelect.addEventListener("change", actualizarAssignatura);
+    });
+</script>
+
+            <!-- Contenidor para mostrar la asignatura -->
+            <div id="assignatura"></div>
+            <div id="imatge"></div>
+        </div>
+    </div>
+
+    <!-- Calendario con Destacados -->
+    <div class="calendari-container">
+        <label for="datepicker">Dates importants:</label>
+        <input type="text" id="datepicker">
+        <div id="event-info"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $(function () {
+            var eventDetails = {
+                "2023-11-15": "Examen de Robòtica",
+                "2023-11-30": "Examen de Programació",
+                "2023-12-02": "Treball de Programació"
+            };
+
+            $("#datepicker").datepicker({
+                dateFormat: 'yy-mm-dd',
+                defaultDate: '2023-11-15',
+                onSelect: function (dateText, inst) {
+                    var selectedDate = new Date(dateText);
+                    var eventInfoContainer = $("#event-info");
+                    eventInfoContainer.html("");
+
+                    // Resalta el día actual con un círculo
+                    if (selectedDate.toISOString().split('T')[0] === new Date().toISOString().split('T')[0]) {
+                        eventInfoContainer.append("<p>Hoy</p>");
+                    }
+
+                    // Muestra los eventos en el contenedor
+                    if (eventDetails[dateText]) {
+                        eventInfoContainer.append("<p>" + eventDetails[dateText] + "</p>");
+                    }
+                },
+                beforeShowDay: function (date) {
+                    var dateStr = $.datepicker.formatDate('yy-mm-dd', date);
+
+                    if (eventDetails[dateStr]) {
+                        return [true, 'event-day', ''];
+                    }
+
+                    return [true, '', ''];
+                }
+            });
+        });
+
+       // $.datepicker.setDefaults($.datepicker.regional['ca']);
+
+        $(function () {
+            $.datepicker.regional['ca'] = {
+                closeText: 'Tanca',
+                prevText: 'Anterior',
+                nextText: 'Següent',
+                currentText: 'Avui',
+                monthNames: ['Gener', 'Febrer', 'Març', 'Abril', 'Maig', 'Juny', 'Juliol', 'Agost', 'Setembre', 'Octubre', 'Novembre', 'Desembre'],
+                monthNamesShort: ['Gen', 'Feb', 'Mar', 'Abr', 'Maig', 'Jun', 'Jul', 'Ago', 'Set', 'Oct', 'Nov', 'Des'],
+                dayNames: ['Dilluns', 'Dimarts', 'Dimecres', 'Dijous', 'Divendres', 'Dissabte', 'Diumenge'],
+                dayNamesShort: ['Dl', 'Dm', 'Dc', 'Dj', 'Dv', 'Ds', 'Dg'],
+                dayNamesMin: ['Dl', 'Dm', 'Dc', 'Dj', 'Dv', 'Ds', 'Dg'],
+                weekHeader: 'Setm',
+                dateFormat: 'dd/mm/yy',
+                firstDay: 0,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''
+            };
+            $.datepicker.setDefaults($.datepicker.regional['ca']);
+        });
+    </script>
+</body>
+</html>
