@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa d'imatge de robot seguidor de línies de Joel.</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="mapper.js"></script>
+  </head>
+  <body>
+    <h1>Passa per sobre de la imatge</h1>
+
+<img src="https://jcano3.neocities.org/imagemap/robots.png" class="mapper" width="849" height="485" border="0" usemap="#map" />
+
+<map name="map">
+<!-- #$-:Image map file created by GIMP Image Map plug-in -->
+<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+<!-- #$-:Please do not edit lines starting with "#$" -->
+<!-- #$VERSION:2.3 -->
+<!-- #$AUTHOR:JoelCanoGarcía -->
+<area shape="poly" coords="115,77,115,99,137,99,139,78" alt="Resisténcies" target="Resisténcies" href="https://www.digikey.es/es/resources/conversion-calculators/conversion-calculator-resistor-color-code" />
+<area shape="poly" coords="166,93,167,116,197,118,195,88" alt="Resisténcies" target="Resisténcies" href="https://www.digikey.es/es/resources/conversion-calculators/conversion-calculator-resistor-color-code" />
+<area shape="poly" coords="233,87,233,109,260,113,258,81" alt="Resisténcies" target="Resisténcies" href="https://www.digikey.es/es/resources/conversion-calculators/conversion-calculator-resistor-color-code" />
+<area shape="poly" coords="293,71,293,97,319,97,315,69" alt="Resisténcies" target="Resisténcies" href="https://www.digikey.es/es/resources/conversion-calculators/conversion-calculator-resistor-color-code" />
+<area shape="poly" coords="203,167,201,196,230,198,228,166" alt="Resisténcies" target="Resisténcies " href="https://www.digikey.es/es/resources/conversion-calculators/conversion-calculator-resistor-color-code" />
+<area shape="poly" coords="176,137,176,156,198,156,197,134" alt="Transistor S8550" target="Transistor S8550" href="https://www.electronicoscaldas.com/es/transistores-bjt/1252-transistor-bjt-pnp-s8550.html" />
+<area shape="poly" coords="235,129,257,131,259,160,235,159" alt="Transistor S8550" target="Transistor S8550" href="https://www.electronicoscaldas.com/es/transistores-bjt/1252-transistor-bjt-pnp-s8550.html" />
+<area shape="poly" coords="122,25,124,61,157,61,147,23" alt="Condensador 100uf" target="Condensador 100uf" href="https://www.electrocomponentes.es/electroliticos/124-condensadores-electroliticos-100uf-16v-20-5x11mm.html" />
+<area shape="poly" coords="276,26,276,54,297,55,297,26" alt="Condensdor 100uf" target="Condensador 100uf" href="https://www.electrocomponentes.es/electroliticos/124-condensadores-electroliticos-100uf-16v-20-5x11mm.html" />
+<area shape="poly" coords="77,206,81,344,343,343,347,209" alt="Piles Duracel AA" target="Piles Duracel AA" href="https://www.google.com/search?q=pilas+duracell+plus+caracteristicas&amp;sca_esv=581841001&amp;rlz=1C1GCEA_enES1077ES1077&amp;ei=2NdRZdzSE7CHkdUP9MCMKA&amp;oq=pilas+duracell+plus+caracte&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiG3BpbGFzIGR1cmFjZWxsIHBsdXMgY2FyYWN0ZSoCCAAyBRAhGKABMgUQIRigAUjwM1DEA1ibJnAFeACQAQCYAY8CoAHnB6oBBTcuMS4xuAEByAEA-AEBwgIKEAAYRxjWBBiwA8ICBRAAGIAEwgIGEAAYFhgewgIEECEYFcICCBAhGBYYHhgdwgIKECEYFhgeGA8YHcICBRAhGJID4gMEGAAgQYgGAZAGCA&amp;sclient=gws-wiz-serp&amp;safe=active&amp;ssui=on" />
+<area shape="poly" coords="193,366,194,413,234,410,237,362" alt="Condensador LM393" target="Condensador LM393" href="https://www.ti.com/product/es-mx/LM393B" />
+<area shape="poly" coords="292,409,289,445,326,447,326,407" alt="Potenciómetre 103-10k OHMS" target="Potenciómetre 103-10k OHMS" href="https://proserquisa.com/principal/inicio/articulo/54" />
+<area shape="poly" coords="105,413,145,407,143,450,106,445" alt="Potenciómetre 103-10k OHMS" target="Potenciómetre 103-10k OHMS" href="https://proserquisa.com/principal/inicio/articulo/54" />
+<area shape="poly" coords="541,124,531,377,604,379,599,128" alt="Motor de Corrent Continua" target="Motor de Corrent Continua" href="https://es.wikipedia.org/wiki/Motor_de_corriente_continua" />
+<area shape="poly" coords="696,132,759,131,768,380,691,382,694,378" alt="Motor de Corrent Continua" target="Motor de Corrent Continua" href="https://es.wikipedia.org/wiki/Motor_de_corriente_continua" />
+</map>
+
+  </body>
+</html>
