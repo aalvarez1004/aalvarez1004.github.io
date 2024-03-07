@@ -1,0 +1,146 @@
+
+
+<html>
+<head>
+  <title>Greeting based on time and day</title>
+  <style>
+    .morning {
+      color: green;
+    }
+    .afternoon {
+      color: blue;
+    }
+    .evening {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Greeting based on time and day</h1>
+  <button onclick="showGreeting()">Click me</button>
+  <p id="greeting"></p>
+  <p id="planet"></p>
+  <img id="planetImage" src="" alt="Planet Image">
+
+  <script>
+    function showGreeting() {
+      //Crea una funciÃƒÂ³ prÃƒÂ²pia amb un nom significatiu  showGreeting en estil camel case o lletra de camell on la primera lletra es miÃƒÂºscula i la segona paraula comenÃƒÂ§a en majÃƒÂºscula. Aquesta funcio te un parentesis buit poerque no te cap argument ni pÃƒÂ¡rametre que hagi de manipular la propia funciÃƒÂ³//
+      var now = new Date();
+      //"let" ens crea una variable de nom que vulguemm que en aquest cas ÃƒÂ¨s un objecte i es posa en minÃƒÂºscula, de la classeDate i la funciÃƒÂ³ new crea un nou objecte d'aquetsa classe exemple: let moha = new Homosapiens(); Homosapiens es una clase amb uns metodes molt complexes, caminar, menjar, pensar... I en comparativa la clase Date getHours(), getDay(). Son mÃƒÂ¨todes que per accedir amb ells acedeixo a la sintaxi del punt o "dot syntax" per exemple: moha.esriu() i en aquest cas now.getHours(). Es MOLT important posar un punt i coma quan acabo la instrucciÃƒÂ³.//
+      var hour = now.getHours();
+      // Console log ÃƒÂ©s molt important perque ens diu el valor d'una variable en un moment dont, console.log(hour); (em diria el valor de la variable pero ens sortiria el numero directament)
+      console.log("Time is after " + hour + ":00 h");
+      var greeting = '';
+
+      if (hour >= 0 && hour < 12) {
+        greeting = 'Good morning!';
+        document.getElementById('greeting').className = 'morning';
+      } else if (hour >= 12 && hour < 18) {
+        greeting = 'Good afternoon!';
+        document.getElementById('greeting').className = 'afternoon';
+      } else {
+        greeting = 'Good evening!';
+        document.getElementById('greeting').className = 'evening';
+      }
+
+      document.getElementById('greeting').textContent = greeting;
+
+      var day = now.getDay();
+      var planet = '';
+      var imageSource = '';
+      var planetExplanation = '';
+
+      // Call the function for the current day of the week
+      if (day === 0) {
+        planet = getSundayPlanet();
+      } else if (day === 1) {
+        planet = getMondayPlanet();
+      } else if (day === 2) {
+        planet = getTuesdayPlanet();
+      } else if (day === 3) {
+        planet = getWednesdayPlanet();
+      } else if (day === 4) {
+        planet = getThursdayPlanet();
+      } else if (day === 5) {
+        planet = getFridayPlanet();
+      } else if (day === 6) {
+        planet = getSaturdayPlanet();
+      } else {
+        planet = 'Unknown';
+        planetExplanation = 'The association with an unknown planet.';
+      }
+
+      displayPlanet(planet.imageSource, planet.explanation);
+
+      var explanation = "Today is " + getDayOfWeek(day) + ", which is associated with the planet " + planet.planet + ".";
+      document.getElementById('planet').textContent = explanation;
+    }
+
+    function getSundayPlanet() {
+      return {
+        planet: 'Sun',
+        imageSource: 'https://alopez302.neocities.org/programaciÃ³/greetings/sun.jpeg',
+        explanation: 'The Sun represents vitality and energy. It is the center of our solar system.'
+      };
+    }
+
+    function getMondayPlanet() {
+      return {
+        planet: 'Moon',
+        imageSource: 'https://alopez302.neocities.org/programaciÃ³/greetings/Moon.jpg',
+        explanation: 'The Moon symbolizes emotions and intuition. It has a significant influence on tides.'
+      };
+    }
+
+    function getTuesdayPlanet() {
+      return {
+        planet: 'Mars',
+        imageSource: 'https://alopez302.neocities.org/programaciÃ³/greetings/mars.jpeg',
+        explanation: 'Mars embodies passion and determination. It is often called the "Red Planet".'
+      };
+    }
+
+    function getWednesdayPlanet() {
+      return {
+        planet: 'Mercury',
+        imageSource: 'https://alopez302.neocities.org/programaciÃ³/greetings/mercury.jpg',
+        explanation: 'Mercury represents communication and intellect. It is the closest planet to the Sun.'
+      };
+    }
+
+    function getThursdayPlanet() {
+return {
+planet: 'Jupiter',
+imageSource: 'https://alopez302.neocities.org/programaciÃ³/greetings/jupiiter.jpeg',
+explanation: 'Jupiter symbolizes expansion and abundance. It is the largest planet in our solar system.'
+};
+}
+function getFridayPlanet() {
+  return {
+    planet: 'Venus',
+    imageSource: 'https://alopez302.neocities.org/programaciÃ³/greetings/venus.jpg',
+    explanation: 'Venus embodies love and beauty. It is often referred to as the "Evening Star".'
+  };
+}
+
+function getSaturdayPlanet() {
+  return {
+    planet: 'Saturn',
+    imageSource: 'https://alopez302.neocities.org/programaciÃ³/greetings/saturn.jpg',
+    explanation: 'Saturn represents discipline and responsibility. It is known for its iconic rings.'
+  };
+}
+
+function displayPlanet(imageSource, planetExplanation) {
+  document.getElementById('planetImage').src = imageSource;
+  document.getElementById('planetImage').alt = "Planet Image";
+  document.getElementById('planet').textContent = planetExplanation;
+}
+
+function getDayOfWeek(day) {
+  var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  return daysOfWeek[day];
+}
+  </script>
+</body>
+</html>
