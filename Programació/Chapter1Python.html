@@ -74,36 +74,43 @@ img {
 	
 </style>
     
-    <h3>Projecte Python Crash Course - Capítol 1: "Getting Started"</h3>
+    <h3> ‎ ‎ ‎ ‎Chapter 1: Saving Shipwrecked Sailors with Bayes’ Rule</h3>
     <br>
     <p>En aquest apartat explicaré tot el que he entès sobre el codi que he treballat, per obtenir un major contingut visual penjaré imatges una pr una de les parts més fonamentals del codi amb la seva explicació a sota per aconseguir que s'entengui el millor possible i evitar cap dubte amb el projecte. </p>
     
 <br>
     
-<h4>1a. Part: Importació de Mòduls</h4>
+<h4> ‎ ‎ ‎ ‎1. Importació de biblioteques i definició de paràmetres</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter1.jpg">
+
+    
+<p><b>- Sys:</b> Aquest mòdul ofereix accés a funcions específiques del sistema com la gestió d'arguments de la línia de comandes i sortides del programa.
+<p><b>- Random:</b> S'utilitza per a generar nombres aleatoris, essencial per a la simulació d'esdeveniments aleatoris en el joc.</p>
+<p><b>- Itertools:</b> Proporciona funcions per a operacions amb iterables, com ara barrejar les coordenades de cerca.</p>
+<p><b>- Numpy:</b> Biblioteca d'àlgebra lineal i càlcul numèric. Aquí s'utilitza per a manipular arrays i realitzar operacions eficients.</p>
+<p><b>- Cv2 as Cv:</b> OpenCV, una llibreria d'imatges i visió per ordinador. Es fa servir com a cv per mantenir compatibilitat amb codi més antic que podria haver estat escrit amb versions anteriors de la llibreria.</p>
+
+<br>  
+<h4> ‎ ‎ ‎ ‎2. Inicialització de la Classe de Cerca</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%; style=width:50%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter2.jpg">
+
+<p>- Creem una classe <b>"Cerca"</b> que encapsula la lògica del joc. </p>
+<p>El mètode <b>"__init__"</b> inicialitza l'estat del joc, carregant la imatge del mapa i gestionant possibles errors.</p>	
+    
+<p><b>- SA2_CORNERS, SA3_CORNERS:</b> Coordenades de les cantonades superiors esquerres (UL) i les cantonades inferiors dretes (LR) de dues àrees de cerca diferents.</p>
+
+	
+<h4> ‎ ‎ ‎ 3. Dibuix del Mapa</h4>
     
 <div class="img-center">   
 <img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/1aChapter1.jpg">
 
-    
-<p><b>- Sys:</b>Aquest mòdul ofereix accés a funcions específiques del sistema com la gestió d'arguments de la línia de comandes i sortides del programa.
-<p><b>- Random:</b>S'utilitza per a generar nombres aleatoris, essencial per a la simulació d'esdeveniments aleatoris en el joc.</p>
-<p><b>- Itertools:</b>Proporciona funcions per a operacions amb iterables, com ara barrejar les coordenades de cerca.</p>
-<p><b>- Numpy:</b>Biblioteca d'àlgebra lineal i càlcul numèric. Aquí s'utilitza per a manipular arrays i realitzar operacions eficients.</p>
-<p><b>- Cv2 as Cv:</b>OpenCV, una llibreria d'imatges i visió per ordinador. Es fa servir com a cv per mantenir compatibilitat amb codi més antic que podria haver estat escrit amb versions anteriors de la llibreria.</p>
-
-<br>  
-<h4>2a. Part: Constants i Configuració Inicial</h4>
-    
-<div class="img-center">   
-<img style = "height: 100%; style=width:50%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/2aChapter1.jpg">
-
-    
-<p>sys: MAP_FILE: Constant que conté el nom del fitxer de mapa utilitzat pel joc.
-SA2_CORNERS, SA3_CORNERS: Coordenades de les cantonades superiors esquerres (UL) i les cantonades inferiors dretes (LR) de dues àrees de cerca diferents.</p>
-
-
-
+<p>- Creem una classe <b>"Cerca"</b> que encapsula la lògica del joc. </p>
+<p>El mètode <b>"__init__"</b> inicialitza l'estat del joc, carregant la imatge del mapa i gestionant possibles errors.</p>
   
     
 <br>
