@@ -74,7 +74,7 @@ img {
 	
 </style>
     
-    <h3> ‎ ‎ ‎ ‎Chapter 1: Saving Shipwrecked Sailors with Bayes’ Rule</h3>
+    <h3> ‎ ‎Chapter 1: Saving Shipwrecked Sailors with Bayes’ Rule</h3>
     <br>
     <p>En aquest apartat explicaré tot el que he entès sobre el codi que he treballat, per obtenir un major contingut visual penjaré imatges una pr una de les parts més fonamentals del codi amb la seva explicació a sota per aconseguir que s'entengui el millor possible i evitar cap dubte amb el projecte. </p>
     
@@ -103,20 +103,38 @@ img {
     
 <p><b>- SA2_CORNERS, SA3_CORNERS:</b> Coordenades de les cantonades superiors esquerres (UL) i les cantonades inferiors dretes (LR) de dues àrees de cerca diferents.</p>
 
-	
-<h4> ‎ ‎ ‎ 3. Dibuix del Mapa</h4>
+
+<br>
+<h4> ‎ ‎ ‎ 3.Establiment de Marcadors de Posició i Creació de Matrius Numpy per a Àrees de Cerca</h4>
+
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter4.jpg">
+
+<p><b>- "Self.sailor_actual":</b> Aquesta línia estableix una llista self.sailor_actual que actua com a coordenades "locals" dins de l'àrea de cerca. Aquesta llista emmagatzema la posició actual del mariner dins de l'àrea específica de cerca.</p>
+
+<p><b>- "Self.area_actual:"</b> Aquest atribut manté un seguiment de l'àrea de cerca actual on es troba el mariner. S'inicialitza a zero.</p>
+
+<p><b>- Self.sa1, self.sa2, self.sa3:"</b> Aquestes variables són matrius NumPy que representen les àrees de cerca corresponents (SA1, SA2, SA3). S'obtenen indexant la matriu d'imatges (self.img) amb les coordenades definides per les cantonades de cada àrea.</p>
+
+
+<br> 
+<h4> ‎ ‎ ‎ 4. Dibuix del Mapa</h4>
     
 <div class="img-center">   
-<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/1aChapter1.jpg">
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter3.jpg">
 
-<p>- Creem una classe <b>"Cerca"</b> que encapsula la lògica del joc. </p>
-<p>El mètode <b>"__init__"</b> inicialitza l'estat del joc, carregant la imatge del mapa i gestionant possibles errors.</p>
-  
+<p>- El mètode <b>"dibuixa_mapa"</b> visualitza el mapa amb una barra d'escala, àrees de cerca, i la darrera ubicació coneguda.</p>
+<p>- Utilitza funcions d'OpenCV per dibuixar elements com línies, rectangles i text a la imatge.</p>
+
+
+
+	
     
 <br>
 <br>
 <br>
-    
+
+	
     
 </div>
     <footer class="page-footer blue">
