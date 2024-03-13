@@ -1,0 +1,15 @@
+
+<table> <colgroup> <col>
+<col style="background-color: pink"> </colgroup>
+<tr>
+<th>Servicio 1</th>
+<th>Servicio 2</th>
+</tr>
+<tr>
+<td>Fotografía</td>
+<td>Creación de videos</td>
+</tr>
+<tr>
+<td>Producción musical</td>
+<td>Composición</td>
+</tr> </table>
