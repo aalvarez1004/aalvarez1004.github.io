@@ -32,49 +32,232 @@
       </nav>
     </div>
     
-    <h1>Taula onda màxima colorants</h1>
 
-<br>
+<script>
+    $(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
+
+<style>
+    .row {
+	padding: 70px 0;
+	&.demo {
+		padding: 0 0 35px;
+	}
+}
+</style>
+  </head>
+  <body>
+  
+    <h1>Projecte de fotònica!</h1>
+
+    <p>L'objectiu és comprendre com funciona la llum mitjançant microcontroladors i programació. En el meu cas, és la transmissió de la llum a través de colorants de diferents colors.</p>
     
-<table> 
-<colgroup>  <col>
-<col  style="background-color: #7FFFD4">
-</colgroup>
+    <p>El procediment per construïr un espectrofotòmetre consta de les seguents parts:</p>
+    
+    <h2>Trobar el màxim d'absorbància de cada colorant</h2>
+    <p>Hem de buscar la bibliografia a google scholar el màxim d'absorbància de: àcid carmínic, luteïna i FCF</p>
 
-<colgroup> <col>
-<col  style="background-color: #4d79ff" span="2"> 
-</colgroup>
-
-<colgroup> <col>
-<col  style="background-color: #d221db" span="3">  
-</colgroup>
-
-<colgroup> <col>
-<col  style="background-color: #37a9de" span="4">  
-</colgroup>
-  
-<tr>
- <th>Àcid Carminic</th>
- <th>Lutenina</th>
- <th>FCF</th>
- <th>Fonts</th>
+<section class="container">
+	
+			<h1>Valors d'absorbància màxima dels colorants:</h1>
+	
+<table id="example" class="display" cellspacing="0" width="100%">
+<thead><tr><th title="Field #1">Nom</th>
+<th title="Field #2">Carmín</th>
+<th title="Field #3">Luteina</th>
+<th title="Field #4">FCF</th>
+<th title="Field #5">Font</th>
+</tr></thead>
+<tbody><tr>
+<td>Raquel Albarrán</td>
+<td>612nm (1)</td>
+<td> 650nm</td>
+<td>630nm (3)</td>
+<td>1. Autores=Dayana Donneys-Victori,Cristian Camilo Ospina-Toro,Mónica Vanesa Zapata-Villegas, Nilson Marriaga-Cabrales,Fiderman Machuca-Martínez, Juan M. Peralta-Hérnandez, Carlos A. Martínez-Huitle<br/>Titulo= DYNA. Electrocoagulación de soluciones de índigo carmín empleando ánodos de magnesio y de aleación AZ31. Vol.85. Sept. 2018<br/><br/>https://www.scielo.cl/scielo.php?script=sci_arttext&amp;pid=S0718-34292015000300004<br/>2. https://grupofranja.net/danos-oculares-que-produce-la-luz-azul-y-mecanismos-fisiologicos-de-defensa/<br/>3. Autores=? Orange Country Biothecnology Education Collavorative Titulo: 1.6 Espectofotometría. Libre Texts Español (MindTouch)<br/>https://espanol.libretexts.org/Biologia/Biotecnolog%C3%ADa/Manual_de_Laboratorio%3A_Introducci%C3%B3n_a_la_Biotecnolog%C3%ADa/01%3A_T%C3%A9cnicas/1.06%3A_Espectrofotometr%C3%ADaibre Texts Español<br/></td>
 </tr>
-  
 <tr>
- <td>504 nm (10)</td>
- <td>481 nm</td>
- <td>620 nm</td>
-<td>Vahiné/ Scholar ("https://dialnet.unirioja.es/servlet/articulo?codigo=8092600")</td>
+<td>Manal El Morabit</td>
+<td>494 nm (4)</td>
+<td>455 nm (5)</td>
+<td>630 nm (6)</td>
+<td>Carmín: Tello V,  Vargas J Efecto de la luz artificial a diferentes fotoperiodos sobre dos variables productivas de la grana cochinilla, Dactylopius coccus Costa (Hemiptera: Dactylopiidae) para su cultivo bajo condiciones controladas<br/>VOLUMEN:33 no.3 Arica ago. 2015<br/> <br/>Luteína:<br/>FCF:</td>
 </tr>
-</table>
+<tr>
+<td>Alexis Álvarez</td>
+<td>494 nm </td>
+<td>445 nm</td>
+<td>620 nm</td>
+<td>Àcid Carmínic: https://dialnet.unirioja.es/servlet/articulo?codigo=9252159<br/>FCF:   Luteina: https://digital.csic.es/bitstream/10261/172392/1/biomarocuhuman.pdf<br/>Luteína: https://digital.csic.es/bitstream/10261/172392/1/biomarocuhuman.pdf</td>
+</tr>
+<tr>
+<td>Bassim Lyamani</td>
+<td>535nm (4)</td>
+<td>422-445nm (5)</td>
+<td>560nm (6)</td>
+<td>4: Ocampo, C. Informe de pràctica de laboratorio, Universidad Peruana Union, Volumen nro. 5 pagines (9) (2006) (DOC) caracterizacion de colorantes | claudia ocampo - Academia.edu<br/>5: Burgos J.T y Calderon F.R DETERMINACION DEL CONTENIDO DE CAROTENOIDES TOTALES EN<br/>OCHO ESPECIES DE FRUTAS Y VERDURAS COMERCIALIZADAS EN<br/>LA ZONA METROPOLITANA DE SAN SALVADOR<br/></td>
+</tr>
+<tr>
+<td> </td>
+<td>494nm</td>
+<td>535nm</td>
+<td>623nm</td>
+<td>ÀCID CARMÍNIC:<br/>Luteina:<br/>FCF:</td>
+</tr>
+<tr>
+<td>Joel Cano </td>
+<td>490-499 nm </td>
+<td>440 nm</td>
+<td>630  nm</td>
+<td>(7B) Àcid Carmínic: Salazar,KG et al Extracción de ácido carmínico como colorante natural a partir de la cochinilla Pol.Con 8 : 583-605 (2023) https://dialnet.unirioja.es/servlet/articulo?codi go=9252159<br/>(7D) FCF: Rodriguez,RF et al Evaluación de colorantes sintéticos en bebidas comercializadas en la ciudad de Trujillo en el periodo 2018 - 2019 Alpha Centauri 2 : 124-139 (2021) https://dialnet.unirioja.es/servlet/articulo?codigo=8092600<br/>(7C) Luteína: Odorrisi, AA et al DESENVOLVIMENTO E VALIDAÇÃO DE MÉTODO ESPECTROFOTOMÉTRICO PARA DETERMINAÇÃO DE CORANTE À BASE DE LUTEÍNA ADICIONADO EM IOGURTE DESNATADO Quim. Nova 35 : 2057-2062 (2012)  https://www.scielo.br/j/qn/a/6qfQpCHJ8jn8rH8RYyrVXSK/?lang=pt#</td>
+</tr>
+<tr>
+<td>Alex Roca</td>
+<td>495 nm</td>
+<td>445 nm</td>
+<td>620 - 630 nm</td>
+<td>Carmín: <br/>Luteina: Estèvez, R. Biomarcadores de luteína, zeaxantina y otros carotenoides en la relación dieta y salud ocular humana (Tesis Doctoral) Universidad Complutense de Madrid. (2016) https://digital.csic.es/bitstream/10261/172392/1/biomarocuhuman.pdf<br/>FCF: Rodríguez, M.C. et al. Cuantificación simultánea de colorantes en bebidas deportivas utilizando espectroscopia visible y PLS–1. Revista FABICIB.  volumen 17. PÁGS. 74 - 84. (2013) https://www.researchgate.net/publication/282977677_Cuantificacion_simultanea_de_colorantes_en_bebidas_deportivas_utilizando_espectroscopia_visible_y_PLS-1<br/></td>
+</tr>
+<tr>
+<td>Daniel Solis</td>
+<td>494 nm</td>
+<td>445 nm</td>
+<td>482 nm</td>
+<td>(7B) Àcid Carmínic: Salazar,KG et al Extracción de ácido carmínico como colorante natural a partir de la cochinilla Pol.Con 8 583-605 (2023) file:///C:/Users/DanielSol%C3%ADsArteaga/Downloads/Dialnet-ExtraccionDeAcidoCarminicoComoColoranteNaturalAPar-9252159%20(1).pdf<br/>Luteina: https://www.boe.es/buscar/pdf/2009/BOE-A-2009-16021-consolidado.pdf<br/>FCF: https://www.argentina.gob.ar/normativa/recurso/86181/dto202-2003-12/htm</td>
+</tr>
+<tr>
+<td>Ariadna Arcas </td>
+<td>495 nm </td>
+<td>455 nm</td>
+<td>630 nm</td>
+<td>Carmín:https://www.scielo.cl/scielo.php?script=sci_arttext&amp;pid=S0718-34292015000300004<br/>Luteína:https://grupofranja.net/danos-oculares-que-produce-la-luz-azul-y-mecanismos-fisiologicos-de-defensa/ <br/>FCF:https://espanol.libretexts.org/Biologia/Biotecnolog%C3%ADa/Manual_de_Laboratorio%3A_Introducci%C3%B3n_a_la_Biotecnolog%C3%ADa/01%3A_T%C3%A9cnicas/1.06%3A_Espectrofotometr%C3%ADa Orange Country Biothecnology Education Collaborative Titulo: 1.6 Espectofotometría. Libre Texts Español (MindTouch) </td>
+</tr>
+<tr>
+<td>Mariana Velasco</td>
+<td>494nm</td>
+<td>445nm</td>
+<td>630nm</td>
+<td>https://docs.google.com/document/d/17PXOVwkcxc__sNLeHLdus3zdZb38olWlQAy8A463YLM/edit?usp=sharing</td>
+</tr>
+<tr>
+<td>Mateo Pérez</td>
+<td>494nm</td>
+<td>440nm</td>
+<td>630nm</td>
+<td>Carmín:<br/>Luteína: https://dialnet.unirioja.es/servlet/articulo?codigo=8092600<br/>FCF:</td>
+</tr>
+</tbody></table>
 
 
-<!-- Inclou jQuery i Popper.js abans de Bootstrap.js -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <p>Aquests són els passos a seguir informaticament:</p>
 
-  
+    <ul>
+      <li>Primer: Tenir instalat Arduino IDE 2.2.1 i instal·lar <a href="https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json">
+un enllaç</a> a Archivo > Preferencias > que premetrà instal·lar plaques adicionals de ESP32   </li> 
+
+      <li>Segon:La instal·lacio anterior fa que surtin mes opcions en el menú Herramientas > Placa > Gestor de placas i busquem la nostra placa, per exemple ESP32 S3 i s'instal·latran els drivers.</li>
+      
+      <li>Tercer: Hem de comprobar els errors de drivers mirant a l'apartat Herramientas > Gestor de placas > esp32 > ESP32S3 Dev Module i ha de quedar un ✔ al costat Es a dir ESP32S3 Dev Module ✔ i ha de quedar el port que en el cas de windows s'anomena COMx per exemple des de COM3 fins a COM9 Amb un tick al costat COM3 ✔ si no esta el tick no esta seleccionat el port, el port i la placa. </li>
+      
+      <li>Quart: Si no surt el port o la placa s'ha d'anar al Adminitrador de Dispositivos des de Inicio. Si dona errors s'ha d'apretar amb el botó dret i comprobar que no diu funciona correctamente amb el boto dret podeu donarli a Actualizar Controlador des de Windows o buscar en el meu ordinador i en el meu ordinador he d'instalar previament el driver CP102</li>
+      
+      <li>Cinquè: Hem d'entendre perfectament el nostre microcontrolador especialment les capacitats de cada pin, es a dir; accepta entrades analògiques (analog input, a través de  ADC o convertidor analògic digital de 10, 12 o 16 bits.), entrades digitals (digital input), sortides analògiques (analog output produir per PWM) i sortides digitals (digital output).</li>
+      
+      <li>Sisè: Expliquem el "pin-out" del <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html">ESP32-S3</a> (Espressif, Shangai, Xina), amb aquesta imatge </li>
+      <img src= "https://alopez302.neocities.org/robòtica/ICFO/ESP32S3.jpg">
+      
+      <br>
+      
+      <li>GPIO, significa General Purpose Input Output, que vol dir "entrada i sortida de propòsit general"</li>
+      
+      <li>Alguns GPIO's son ADC Concretament 20 GPIO. Això vol dir que són possibles llocs per connectar un sensor perquè poden convertir una senyal analògica continua, per exemple un llum UV en un senyal digital format només per 0 i 1, perquè és un ADC (Analog Digital Converter). Malauradament no es recomanable utilitzar alguns d'aquests ADC per connectar alguns sensors perquè tenen altres capacitats aquests pins, i les perdem o funciona malament l'aparell, o que el propi fabricant no recomana connectar en alguns pins.</li>
+      
+      <li>ADC és un conversor analògic digital de 12 bits en el cas de ESP32-S3 i Genuino 101, de 10 bits en el cas de Arduino UNO, i de 15 o 16 bits del ADS 1115, QUE ES POT CONNECTAR a Arduino i a Raspberry Pi o Banana Pi.</li>
+      
+      <li>Que significa de forma pràctica ADC de 10, 12, 15, 16 bits?
+      Que tenim 2 elevat al número de bits de mesures del sensor, es a dir pel de 10 bits 2<sup>10</sup> = 1024 valors diferents desde 0 a 1023 per a qualsevol sensor.</li>
+      
+      <li> En el cas ADC de 12 bits que pertany al ESP32-S3, si connectem a qualsevol sensor es podrà donar 2<sup>12</sup>= 4096 valors des de 0 a 4095.</li>
+      
+      <li>Que significa aquests valors de 0 a 4095? Son valors sense unitats però es poden transformar en voltatge que en el cas de ESP32-S3 pot ser 3V3 (3.3 v, es posa així perque els punts es poden esborrar de la placa i no saber quin es el valor reial, al igual que 4K7 "4700 Ohms"), o 5 v, ja que el sensor pot tenir 3 potes o més, una anirà al voltatge una altra anirà a terra o GND per poder tancar el circuit, i la tercera anirà les dades del sensor. (números de 0 a 4095.) Si hi ha més potes poden estar unides a un rellotge CLK, o a pins de comunicació. </li>
+      
+      <img src = "guvas12sd.png">
+      <br>
+      
+      <li>Com està conectada a 5v i és un Arduino UNO a l'imatge superior, té 1024 nivells diferents, quant seria cada nivell en volts?
+      5v / 1024 = 0.0048828125 v = 4.8 mv. Si el valor fos 314 quants serien els volts? 0.0048828125 x 314 = 1.533203125 v</li>
+      
+      <li>Que significa 1.53v? Equival a un nivell de radiació ultraviolada determinat, pot ser mesurada mW / m<sup>2</sup> i potser relacionada amb el voltatge  en una fòrmula lineal que es troba en el full de característiques o datasheet.</li>
+      
+      <li>En el codi seguent veiem la transformació  del valor que dona Arduino de 0 a 1023 a volts.</li>
+      
+      <pre><code>
+      float sensorValue;
+      sensorValue = analogRead(A0);
+      sensorVoltage = sensorValue/1024*5.0
+      </code></pre>
+      </ul>
+      <h2>Tipus de variables en arduino</h2>
+      <p>Primer de tot hem de crear ua variable anomenada sensorValue i per crear-la utilitzaem la instrucció float sensorValue;</p>
+      <p>Això crearà un espai a la memòria del microcontrolador capaç d'emmagatzemar un nombre decimal, o (floating point number). Aquest espai de memòria el puc anomenar com volgui, si l'anomenès valor Sensor, en castellà o català, només ho entendria la gent d'aquí. </p>
+      <p>El posem en anglès en estil <b>camelCase</b> o lletra de camell, hi ha altres estils com <b>snake_case</b>, <b>PascalCase</b>, <b>kebab-case</b>. Es a dir la variable que emmagatzema els valors del sensor es pot anomenar en els estils anteriors com: sensorValue, sensor_value, SensorValue, sensor-value. Sempre s'ha de fer servir el mateix estil en un codi, el  més utilitzat és cameCase.</p>
+      <p>És important el punt i coma al final de cada línia, ja que indica final d'instrucció.</p> 
+      <p>En els microcontroladors antics que tenen molt poca memòria (Arduino UNO 16kB molt poc comparat amb ESP32-s3que te 512kB) podria gastar menys memòria definint variables més petites que un nombre decimal, per exemple un nombre sencer. En aquest darrer cas la instrucció seria int sensorValue; perquè int vol dir <i>integer number</i>, i accepta 5 dígits però fins al número 64000 o 32000 i 1023 esta dins del marge. Si en comptes d'un sensor fos una sortida analògica de 8 bits que es igual a 2<sup>8</sup> igual a 255, quina variable utilitzaries? </p>
+       <p>Si vull utilitzar byte no arribaria a 1023 si no a 255 i no serviria per un sensor que llegeix de 0 a 1023. Aquest de 255 es podria fer servir per una sortida analògica PWM de 8 bits, però estem parlant d'entrades analògiques, de sensors. </p>
+       <p>Altres tipus de variables que consumeixen molt poca memòria es boolean. <i>Boolean</i> ve del nom d'un senyor Boole que va inventar àlgebra basada en 0 i 1, o en el seu equivalent <i>false</i> i <i>true</i>. Es pot fer servir per començar un moviment, primer és false i després es truesi es compleix una condició com per exemple pressionar una tecla.</p>
+         <p><i>Char</i> es un altre tipus de variable, que vol dir caràcter i és compatible amb arduino, i que inclou els caràcters  <a href="https://www.ascii-code.com/"> ASCII </a> , on podem veure que els caràcters són números tant decimals com binaris. Per exemple la lletra a és el número decimal 97 i el número binari 01100001. Perquè 0*2<sup>7</sup>+1*2<sup>6</sup>+1*2<sup>5</sup>+0*2<sup>4</sup>+0*2<sup>3</sup>+0*2<sup>2</sup>+0*2<sup>1</sup>+1*2<sup>0</sup>= 0+64+32+0+0+0+0+1 = 97 </p>
+          <img src="variables.png">
+          
+       <h2>Convertidor analògic digital ADC</h2>
+       
+        <img src="adc.converter.png">
+        
+        <p>En el cas de arduino UNO, la <b>velocitat de mostreig del rellotge</b> inclós el ADC, és 125 kHz que vol dir 125000 cicles per segon. En el cas de ESP32-S3, la seva velocitat  màxima és de 2 MHz, (2000000 de mostres per segon) però realment s'aprofita només 1000 per segon, via wifi. Aquests valors tan alts són teòrics. </p>
+        
+        <h2>Codi per manipular una entrada analògica (sensor)</h2>
+        
+        <code>
+        const int uvLEDPin = 5; // Pin digital per al LED UV
+        const int uvSensorPin = 11; // Pin analògic per al sensor UV
+        </code>
+        
+        <p>Al principi de tot codi sempre hi ha les constants i les variables que utilitzarem. En aquest cas tot són constants globals i no hi ha cap biblioteca inicial importada. Una constant global vol dir que afecta totes les funcions de tot el codi. En canvi una variable local està definida dins d'una funció i no la podem cridar desde fora de la funció. Les constants signifiquen que jo en comptes d'escriure el nombre 5 he d'escriure uvLEDPin, i en comptes d'escriure 11 escric uvSensorPin, fent el codi molt més llarg, però més comprensible per un humà, perquè s'enten molt millor si és un sensor o un led ultravioleta quejo connecto. Normalment es posa en anglès camelCase.</p>
+        
+        <code>
+        void setup() {
+        pinMode(uvLEDPin, OUTPUT);
+        Serial.begin(9600);
+        }
+        </code>
+        
+        <p>El void setup és una funció obligatoria del programa arduino i significa la configuració del hardware, o maquinari del propi arduino. Ens diu en primer lloc si els pins que tenim connectats són entrades o sortides, amb l'argument OUTPUT, si és una sortida, o argument INPUT, si és una entrada. Ens hem d'adonar que pinMode és una funció predefinida d'arduno que accepta dos arguments. El primer és el número o nom del pin, i el segon és si és una entrada o sortida. Serial.begin és un mètode construït amb la sintaxi del punt, això vol dir que Serial és un objecte predefinit de la classe Serial</p>
+      
+     <code>
+void loop() {
+// Encén el LED UV
+//digitalWrite(uvLEDPin, 80);
+analogWrite(uvLEDPin, 80);
+
+// Mesura el valor del sensor UV
+int uvValue = analogRead(uvSensorPin);
+
+// Imprimeix el valor a la consola sèrie
+Serial.print("UV Value: ");
+Serial.println(uvValue);
+
+// Apaga el LED UV
+//digitalWrite(uvLEDPin, LOW);
+
+// Espera un temps abans de fer la següent mesura
+delay(1000);
+}
+</code>
+      <p>Per exemple el codi seguent utilitza una entrada analògica de 12 bits d'ESP32-S3 i on esta conectat un sensor UV anomenat GUVA-S12
+</p>
+ <iframe src="https://wokwi.com/projects/387887325734829057" width="1200" height="700"></iframe>
+
+
     
         
     <br>
