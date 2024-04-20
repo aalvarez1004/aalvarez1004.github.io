@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
@@ -40,6 +39,8 @@
     
     <h2>Trobar el màxim d'absorbància de cada colorant</h2>
     <p>Hem de buscar la bibliografia a google scholar el màxim d'absorbància de: àcid carmínic, luteïna i FCF</p>
+
+<br>
 
 <section class="container">
 	
@@ -131,8 +132,188 @@
 </tr>
 </tbody></table>
 
+<br>
 
-    <p>Aquests són els passos a seguir informaticament:</p>
+<h2>Comprovar el màxim d'absorbància amb codi:</h2>
+
+<p>Utilitzarem codis que faran un escaneig o scan de forma que encendran els llums red, green, blue del Led RGB de forma que generarem longitud d'ona que va de 380 namòmetres a 780 namòmetres.</p>
+
+<label for="wavelength">Longitud d'ona (nm):</label>
+    <input type="number" id="wavelength" value="550" min="380" max="780">
+    <button onclick="convertWavelength()">Converteix a RGB</button>
+    <br><br>
+    <div id="result"></div>
+    <script>
+      function convertWavelength() {
+        const wavelength = document.getElementById("wavelength").value;
+        const R = Math.round(getRGBValue(wavelength, 'R'));
+        const G = Math.round(getRGBValue(wavelength, 'G'));
+        const B = Math.round(getRGBValue(wavelength, 'B'));
+        const result = `RGB values: (${R}, ${G}, ${B})`;
+        document.getElementById("result").textContent = result;
+      }
+
+      function getRGBValue(wavelength, color) {
+        const gamma = 0.8;
+        const factor = 0.1;
+        let R, G, B;
+        const nm = parseFloat(wavelength);
+        if (nm < 380 || nm > 780) {
+          return 0;
+        }
+        if (nm >= 380 && nm < 440) {
+          R = -(nm - 440) / (440 - 380);
+          G = 0;
+          B = 1;
+        } else if (nm >= 440 && nm < 490) {
+          R = 0;
+          G = (nm - 440) / (490 - 440);
+          B = 1;
+        } else if (nm >= 490 && nm < 510) {
+          R = 0;
+          G = 1;
+          B = -(nm - 510) / (510 - 490);
+        } else if (nm >= 510 && nm < 580) {
+          R = (nm - 510) / (580 - 510);
+          G = 1;
+          B = 0;
+        } else if (nm >= 580 && nm < 645) {
+          R = 1;
+          G = -(nm - 645) / (645 - 580);
+          B = 0.0;
+        } else if (nm >= 645 && nm < 781) {
+          R = 1;
+          G = 0;
+          B = 0;
+        }
+        if (color === 'R') {
+          return 255 * Math.pow(R, gamma);
+        } else if (color === 'G') {
+          return 255 * Math.pow(G, gamma);
+        } else if (color === 'B') {
+          return 255 * Math.pow(B, gamma);
+        }
+      }
+    </script>
+    
+    <hr>
+    <p><img src= "https://alopez302.neocities.org/robòtica/ICFO/spectrum.jpg"></p>
+    <p>En aquesta immatge podem veure la relació entre la ona i el color.</p>
+    <br>
+    <h4>Explicació del codi:</h4>
+    
+  <p>El codi anterior que transforma longitud d'ona en valors RGB, funciona de la seguent manera: Longitud d'ona té una etiqueta o tag anomenat label. </p>
+    
+  &lt;input type="number" id="wavelength" value="550" min="380" max="780" &gt;
+ 
+  <p>L'etiqueta input permet introduir qualsevol tipus de valors pel teclat, però la propietat o atribut de input anomenat type esta definida com a number i només   permet introduir números. El value és una propietat o atribut de input que fa que surti com a valor predeterminat i min i max són els valors mínims i m`xims i no s'accepten valors fora de marge. La ID és una propietat molt important ja que és com el DNI i el cridem en getElementById.</p>
+   
+  &lt; button onclick="convertWavelength()" &gt; Converteix a RGB  &lt; /button &gt; 
+ 
+  <p>La paraula button crea un botó de forma automàtica que té una propietat o atribut anomenada onlick que està esperant ser clickada o no. Altres que poden existir onmouseover (quan estic a sobre), onkeydown (quan pressiono una tecla), onload (quan es carrega una pàgina o un element), onsubmit (quan envío un formulari).</p>
+  <p>El contigut del botó s'escriu abans de final de button.</p>
+  <p>Quan detecti que onclick és igual a true s'executarà una funció que no té cap paràmetre ni argument perquè té dos parèntesis buits. La funció s'anomena convertWavelenght i està definida més endevant amb la paraula function convertWavelenght(){...instruccions aquí...}. Això vol dir que quan clicko a un botó creat amb html crido a una funció creada en javaScript més endevant que convertirà la longitud d'ona que escric en RGB.</p>
+  <p> &lt;div id="result"&gt;&lt;/div&gt;</p>
+  <p>Un div és un divisor que és com un paràgraf en aquest cas buit que té un identificador anomenat result que només es veurà i s'executarà desprès, és a dir, quan es carrega la pàgina està buit u quan clickem el botó de convertir farà la seva funció.</p>
+  
+  <pre> 
+  <code>
+  function convertWavelength() {
+        const wavelength = document.getElementById("wavelength").value;
+        const R = Math.round(getRGBValue(wavelength, 'R'));
+        const G = Math.round(getRGBValue(wavelength, 'G'));
+        const B = Math.round(getRGBValue(wavelength, 'B'));
+        const result = `RGB values: (${R}, ${G}, ${B})`;
+        document.getElementById("result").textContent = result;
+      }
+  </code>
+  </pre>
+  
+  <p>Una funció és una manera que tenim de transfomar un valor que donem nosaltres inicialment, en un altre diferent. En aquest cas volem transformar el valor de la longitud d'ona en tres valors: RGB. </p>
+  <p>Sempre que escric la paraula function, per crear una funció, he de posar al costat el nom de la funció, en anglés, que expliqui el que fa, en aquest cas convertir la longitud d'ona i poso convertWaveLength(), en camelCase, i posem un parentesis buit perquè no depen de paràmetres o arguments.</p>
+  <p>Dins de la funció tenim diverses instruccions agrupades en una clau</p>
+  <p>Les primeres 5 línies de la funció defineixen constants locals perquè s'apliquen dins de la funció i no afecten a tot el codi, a diferència de les constants globals que es posen fora de les funcions i afecten a tot el codi(const PI = 3,14;).</p>
+  <br>
+  <ol>
+  <li>La primera línia de la funció agafa el valor (.value) de la longitud que s'ha introduït a l'input, i l'identifica perquè l'agafa amb el getElementById, i l'emmagatzemem amb un nom concret (wavelength) que no pot variar dins de la funció, però si  globalment.</li>
+  <li>const R = Math.round(getRGBValue(wavelength, 'R'));<br>
+      const G = Math.round(getRGBValue(wavelength, 'G'));<br>
+      const B = Math.round(getRGBValue(wavelength, 'B'));<br>
+   El que fan aquestes línies és agafar una funció que s'anomena RGBValue i que té dos paràmteres o arguments interns que són: primer la longitud d'ona introduïda per l'usuari i el segón, el valor RGB que generem. El valor del càlcul matemàtic que obté la funció getRGBValue, de RGB és un float(número decimal), i nosaltres el convertim en un int(integer o número sencer), i el guardem en una variable constant local anomenada R, G o B.</li>
+   <li>const result = `RGB values: (${R}, ${G}, ${B})`;<br>
+       document.getElementById("result").textContent = result;<br>
+   El result col·loca els valors obtinguts anteriorment amb el sel·lector "$", dins del div buit amb identificador "result".</li>
+  </ol>
+  <br>
+  
+  <pre>
+  <code>
+  function getRGBValue(wavelength, color) {
+        const gamma = 0.8;
+        const factor = 0.1;
+        let R, G, B;
+        const nm = parseFloat(wavelength);
+        if (nm < 380 || nm > 780) {
+          return 0;
+        }
+  </code>
+  </pre>
+ 
+ <ol>
+ <li>La funció getRGBValue, té dos arguments interns que són: la longitud d'ona i el color, i necessita dos constants (gamma i factor) per fer la transformació matemàtica entre longitud d'ona i valor RGB, ja que el color és complexe i, gamma i factor corregeixen les fòrmules que veurem més endavant perquè aquí la fòrmula és molt simple: si l'usuari introdueix un valor entre 380 nm i 780 nm, es donarà un valor 0 perquè estem fora de marge de la longitud d'ona visible..</li>
+ 
+ <li>(parseFloat) transforma qualssevol variable en un float, perquè després amb la funció (.round) podem transormar això en un integer. Si el nombre introduït com a namòmetres està fora de marge no s'ha de fer res (return 0;)</li>
+ </ol>
+ 
+ <br>
+ 
+ <pre>
+ <code>
+  if (nm >= 380 && nm < 440) {
+          R = -(nm - 440) / (440 - 380);
+          G = 0;
+          B = 1;
+        } else if (nm >= 440 && nm < 490) {
+          R = 0;
+          G = (nm - 440) / (490 - 440);
+          B = 1;
+        } else if (nm >= 490 && nm < 510) {
+          R = 0;
+          G = 1;
+          B = -(nm - 510) / (510 - 490);
+        } else if (nm >= 510 && nm < 580) {
+          R = (nm - 510) / (580 - 510);
+          G = 1;
+          B = 0;
+        } else if (nm >= 580 && nm < 645) {
+          R = 1;
+          G = -(nm - 645) / (645 - 580);
+          B = 0.0;
+        } else if (nm >= 645 && nm < 781) {
+          R = 1;
+          G = 0;
+          B = 0;
+        }
+        if (color === 'R') {
+          return 255 * Math.pow(R, gamma);
+        } else if (color === 'G') {
+          return 255 * Math.pow(G, gamma);
+        } else if (color === 'B') {
+          return 255 * Math.pow(B, gamma);
+        }
+      }
+ </code>
+ </pre>
+ 
+ <ol>
+ <li>Si el valor que s'introdueix es troba entre els dos valors, es fa una divisió entre el valor en específic, menys el valor màxim de marge, entre la resta dels dos marges, donant el valor d'un dels tres colors.</li>
+ <li>En el cas de R, la transformació és més complicada ja que hem de obtenir un nombre i multiplicar-lo per B elevat a gamma, ja que Math.pow, significa "elevat".</li>
+ </ol>
+ 
+<br>
+<hr>
+ 
+    <h4>Aquests són els passos a seguir informàticament:</h4>
 
     <ul>
       <li>Primer: Tenir instalat Arduino IDE 2.2.1 i instal·lar <a href="https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json">
@@ -147,10 +328,14 @@ un enllaç</a> a Archivo > Preferencias > que premetrà instal·lar plaques adic
       <li>Cinquè: Hem d'entendre perfectament el nostre microcontrolador especialment les capacitats de cada pin, es a dir; accepta entrades analògiques (analog input, a través de  ADC o convertidor analògic digital de 10, 12 o 16 bits.), entrades digitals (digital input), sortides analògiques (analog output produir per PWM) i sortides digitals (digital output).</li>
       
       <li>Sisè: Expliquem el "pin-out" del <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html">ESP32-S3</a> (Espressif, Shangai, Xina), amb aquesta imatge </li>
-      <img src= "https://alopez302.neocities.org/robòtica/ICFO/ESP32S3.jpg">
-      
+      <br>
       <br>
       
+      <img src= "https://alopez302.neocities.org/robòtica/ICFO/ESP32S3.jpg" width="700" height="400">
+      
+      <br>
+      <br>
+      <h4>COMPONENTS:</h4>
       <li>GPIO, significa General Purpose Input Output, que vol dir "entrada i sortida de propòsit general"</li>
       
       <li>Alguns GPIO's son ADC Concretament 20 GPIO. Això vol dir que són possibles llocs per connectar un sensor perquè poden convertir una senyal analògica continua, per exemple un llum UV en un senyal digital format només per 0 i 1, perquè és un ADC (Analog Digital Converter). Malauradament no es recomanable utilitzar alguns d'aquests ADC per connectar alguns sensors perquè tenen altres capacitats aquests pins, i les perdem o funciona malament l'aparell, o que el propi fabricant no recomana connectar en alguns pins.</li>
@@ -163,7 +348,9 @@ un enllaç</a> a Archivo > Preferencias > que premetrà instal·lar plaques adic
       <li> En el cas ADC de 12 bits que pertany al ESP32-S3, si connectem a qualsevol sensor es podrà donar 2<sup>12</sup>= 4096 valors des de 0 a 4095.</li>
       
       <li>Que significa aquests valors de 0 a 4095? Son valors sense unitats però es poden transformar en voltatge que en el cas de ESP32-S3 pot ser 3V3 (3.3 v, es posa així perque els punts es poden esborrar de la placa i no saber quin es el valor reial, al igual que 4K7 "4700 Ohms"), o 5 v, ja que el sensor pot tenir 3 potes o més, una anirà al voltatge una altra anirà a terra o GND per poder tancar el circuit, i la tercera anirà les dades del sensor. (números de 0 a 4095.) Si hi ha més potes poden estar unides a un rellotge CLK, o a pins de comunicació. </li>
-      
+      <br>
+      <hr>
+      <br>
       <img src = "guvas12sd.png">
       <br>
       
