@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabla Elaborada</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            animation: slideIn 2s ease;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 15px;
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+            transition: background-color 0.3s ease;
+        }
+        .highlight {
+            font-weight: bold;
+            color: red;
+        }
+        @keyframes slideIn {
+            from {opacity: 0; transform: translateY(-20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+
+<h2>Tabla Elaborada</h2>
+
+<table id="myTable">
+  <tr>
+    <th>Nombre</th>
+    <th>Canción Favorita</th> 
+  </tr>
+  <tr>
+    <td>Juan</td>
+    <td>Despacito</td>
+  </tr>
+  <tr>
+    <td>María</td>
+    <td>La Bicicleta</td>
+  </tr>
+  <!-- Añade más filas aquí -->
+</table>
+
+<script>
+    // Añade una alarma que se activa cada 5 segundos
+    setInterval(function() {
+        alert('¡Alarma!');
+    }, 5000);
+
+    // Resalta los nombres en negrita y color rojo
+    var table = document.getElementById('myTable');
+    for (var i = 0, row; row = table.rows[i]; i++) {
+        row.cells[0].classList.add('highlight');
+    }
+</script>
+
+</body>
+</html>
