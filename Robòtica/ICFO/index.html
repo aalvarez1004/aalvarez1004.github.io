@@ -309,7 +309,79 @@
  <li>Si el valor que s'introdueix es troba entre els dos valors, es fa una divisió entre el valor en específic, menys el valor màxim de marge, entre la resta dels dos marges, donant el valor d'un dels tres colors.</li>
  <li>En el cas de R, la transformació és més complicada ja que hem de obtenir un nombre i multiplicar-lo per B elevat a gamma, ja que Math.pow, significa "elevat".</li>
  </ol>
- 
+
+<br>
+
+<h1>Projecte espetrofotòmentre amb Arduino, Python i PC</h1>
+<p>El codi d'arduino és el següent:</p>
+
+
+<pre><code>
+//creem 6 variables de tipus integer (int), vol dir que els pins del 12 al 17, així els donem noms per identifica-los perquè és més fàcil
+//Encendre pinLedR que 12 ja que vol dir el pin el que es connecta la pota R del led RGB. Aqestes definicions ajuden a entendre el  codi als humans
+//i tenir ordenat el codii
+int pinLedR = 12; // Pin per al LED vermell (RGB)
+int pinLedG = 13; // Pin per al LED verd (RGB)
+int pinLedB = 14; // Pin per al LED blau (RGB)
+int pinLedUV = 15; // Pin per al LED ultraviolat
+int pinLedIR = 16; // Pin per al LED infraroig
+int pinLDR = 17; // Pin per al sensor LDR
+
+/*setup é una funció de configuració que és obligatori declarar on diem que els pinMode que és el mode de connexió de cada  pin, que pot ser sortida
+(OUTPUT) perquèlallum sur cap a fora (output) en el cas del pin ledR, pin ledG, pinLedB, pinLedUV, pinLedIR. En el cas del pin LDRés un IMPUT, que el que fa es entar informació, en aquest cas llum de l'exterior.
+*/
+void setup() {
+pinMode(pinLedR, OUTPUT);
+pinMode(pinLedG, OUTPUT);
+pinMode(pinLedB, OUTPUT);
+pinMode(pinLedUV, OUTPUT);
+pinMode(pinLedIR, OUTPUT);
+
+pinMode(pinLDR, INPUT);
+/*
+Serial està en majúscula perque és una classe que controla la comunicació en sèrie entre el arduino i l'ordinador. Els arduino UNO és comuniquen a
+9600 bits per segon 
+*/
+Serial.begin(9600); // Inicia la comunicació sèrie a 9600 bauds
+}
+
+void loop() {
+if (Serial.available() > 0) {
+//La comunicació sèrie és a través de un cable que antigament s'anomenava o RS232 que tenia 9 pins, dels 9pins algúns eren per transmetre informació tipus dúplex que vl dir que envia informació des de l'ordinador a l'arduino i a l'inrevés. Internament el arduino i altres microcontrolador internament també tenen connexions fisiques i protocols de software RS232
+char comanda = Serial.read(); // Llegeix la comanda enviada pel port sèrie
+
+switch(comanda) {
+case ‘I’: // Encén o apaga el LED infraroig i llegeix el sensor LDR
+digitalWrite(pinLedIR, !digitalRead(pinLedIR));
+llegirLDR();
+break;
+case ‘U’: // Encén o apaga el LED ultraviolat i llegeix el sensor LDR
+digitalWrite(pinLedUV, !digitalRead(pinLedUV));
+llegirLDR();
+break;
+case ‘R’: // Controla el LED RGB i llegeix el sensor LDR
+int r = Serial.parseInt();
+int g = Serial.parseInt();
+int b = Serial.parseInt();
+
+analogWrite(pinLedR, r); // Controla el LED vermell
+analogWrite(pinLedG, g); // Controla el LED verd
+analogWrite(pinLedB, b); // Controla el LED blau
+
+llegirLDR();
+break;
+}
+}
+// Altres parts de la teva lògica del programa
+}
+
+void llegirLDR() {
+int valorLDR = analogRead(pinLDR);
+Serial.print(“Valor LDR: “);
+Serial.println(valorLDR);
+}
+</code></pre>		
+		
 <br>
 <hr>
  
