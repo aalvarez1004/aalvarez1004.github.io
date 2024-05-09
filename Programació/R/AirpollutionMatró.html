@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The web site of aalvarez1004</title>
+    <link href="/style.css?version=1" rel="stylesheet" type="text/css" media="all">
+    <!-- Materialze - Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+  
+    <!-- Materialize - Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <div class="navbar-fixed">
+      <nav class="blue">
+        <div class="nav-wrapper">
+          <a href="https:// ****TREUREAIXÓ*** aalvarez1004.github.io/AAN/inici.html" class="brand-logo"><img class="logo" src="https://aalvarez1004.github.io/Imagenes/logoGithubAAN3.jpg"/></a>
+          <ul id="nav-mobile"class="right hide-on-med-and-down">
+         
+          <li><a href="https://****TREUREAIXÓ****aalvarez1004.github.io/Programació/Inici.html"> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎<!--posar Apartat anterior amb els espais--> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  </a></li>
+
+</head>
+		  
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+<br>
+
+
+<body>
+
+<style>
+p {
+	padding-left:20px;
+	padding-right:20px;
+}
+
+.header {
+	height:200px;
+	display:flex;
+	flex-direction:row;
+	padding-left:20px
+}
+
+.headertext {
+	font-size:32px;
+	text-align:left;
+}
+
+.info {
+	padding-left:25px;
+	text-align:left
+}
+	
+
+title {
+	margin-left: 20px;
+        margin-right: auto;
+}
+
+	
+img {
+  display: block;
+  margin-left: 20px;
+  margin-right: auto;
+ 
+}
+
+	
+</style>
+    
+    <h3> ‎ ‎ ‎"Air pollution in Mataró"</h3>
+    <br>
+    <p>In this graph we can see the variation of pollutants over the years in the city of Mataró, from 1999 to 2023. This project aims to analyze and understand the evolution of air quality in Mataró during this period of time, we will do it with different components with its image and text correxpondiente to analyze them in detail and to compare each one to get more information about the work.</p>
+    
+<br>
+    
+<h4> ‎ ‎ ‎ ‎1. Graphic Time Variation (Air pollution in Mataró)</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/GraphicTimeVariation.jpg">
+
+    
+<p>In this project, we will analyze in depth the air pollution in Mataró from 1991 to 2023. The image provided will be an essential tool for our analysis, as it presents a series of detailed line graphs representing the evolution of various pollutants in the air during this period.
+The graphs are organized in three rows, each showing data related to different aspects: by hour, by month and by day of the week. Each graph has different colored lines representing different types of pollutants, including <b>NO2, PM10, NOx, CO, SO2, NO, O3, PS and HCT.</b>
+These graphs will allow us to observe fluctuations in the levels of these pollutants over time, providing crucial insights for our analysis. For example, we will be able to identify temporal patterns in air pollution, such as whether levels of certain pollutants tend to be higher during certain times of the day, months of the year, or days of the week.
+In addition, by comparing the levels of different pollutants, we will be able to gain a better understanding of the composition of air pollution in Mataró and how it has changed over time. This could reveal valuable information about the sources of air pollution in the region and how they have evolved over time. In summary, this picture will provide a solid basis for our analysis of air pollution in Mataró. Through our detailed analysis, we hope to gain a deeper understanding of this critical environmental problem and contribute to efforts to address it. </p>
+
+<p><b>---------------------------------------------------------------------------------------------------------------------------------------------</b>
+<hr>
+
+<br>  
+<h4> ‎ ‎ ‎ ‎2. Inicialització de la Classe de Cerca</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%; style=width:50%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter2.jpg">
+
+<p>- Creem una classe <b>"Cerca"</b> que encapsula la lògica del joc. </p>
+<p>- El mètode <b>"__init__"</b> inicialitza l'estat del joc, carregant la imatge del mapa i gestionant possibles errors.</p>	
+
+
+<br>
+<h4> ‎ ‎ ‎ 3. Marcadors Posició i Creació de Matrius Numpy per a Àrees de Cerca</h4>
+
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter4.jpg">
+
+<p><b>- "Self.sailor_actual":</b> Aquesta línia estableix una llista self.sailor_actual que actua com a coordenades "locals" dins de l'àrea de cerca. Aquesta llista emmagatzema la posició actual del mariner dins de l'àrea específica de cerca.</p>
+
+<p><b>- "Self.area_actual:"</b> Aquest atribut manté un seguiment de l'àrea de cerca actual on es troba el mariner. S'inicialitza a zero.</p>
+
+<p><b>- "Self.sa1, self.sa2, self.sa3:"</b> Aquestes variables són matrius NumPy que representen les àrees de cerca corresponents <b>(SA1, SA2, SA3)</b>. S'obtenen indexant la matriu d'imatges <b>(self.img)</b> amb les coordenades definides per les cantonades de cada àrea. Coordenades de les cantonades superiors esquerres (UL) i les cantonades inferiors dretes (LR) de dues àrees de cerca diferents.</p>
+
+
+<br>
+<h4> ‎ ‎ ‎ 4.Inicialització de Probabilitats d'Objectiu i Efectivitat de la Cerca</h4>
+
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter5.jpg">
+
+
+<p><b>- "Self.p1, self.p2, self.p3:"</b>Aquests atributs representen les probabilitats inicials d'objectiu per a cada àrea de cerca. En el context del joc, aquests valors indiquen la creença inicial sobre la probabilitat de trobar el mariner desaparegut en cada àrea respectivament.</p>
+<p><b>- "Self.sep1, self.sep2, self.sep3:"</b> Aquests atributs inicialitzen les probabilitats d'efectivitat de la cerca per a cada àrea. Aquestes probabilitats es fan servir per calcular quan efectiva és la cerca en cada àrea després de realitzar una operació de cerca. S'actualitzen dinàmicament al llarg del joc basant-se en els resultats de les cerques realitzades.</p>
+
+	
+<br> 
+<h4> ‎ ‎ ‎ 5. Dibuix del Mapa</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter3.jpg">
+
+<p>- El mètode <b>"dibuixa_mapa"</b> visualitza el mapa amb una barra d'escala, àrees de cerca, i la darrera ubicació coneguda.</p>
+<p>- Utilitza funcions d'OpenCV per dibuixar elements com línies, rectangles i text a la imatge.</p>
+
+
+<br> 
+<h4> ‎ ‎ ‎ 6. Visualització del Mapa i Posicions del Mariner</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter6.jpg">
+
+<p>- Aquesta part del codi es refereix a la funció <b>"draw_map"</b> que té com a objectiu visualitzar el mapa del joc, les àrees de cerca numerades i les posicions conegudes del mariner.</p>
+<p>- Utilitza la llibreria OpenCV per dibuixar rectangles que representen les àrees de cerca (SA1, SA2, SA3). Cada àrea està etiquetada amb un número corresponent (1, 2, 3).</p>
+<p>- S'afegeixen els caràcters "+" i "*" per indicar la darrera ubicació coneguda del mariner i la seva posició actual, respectivament. Aquesta informació és vital per als jugadors ja que forma la base per les decisions de cerca.</p>
+
+
+<br> 
+<h4> ‎ ‎ ‎ 7. Dibuix del Mapa</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter7.jpg">
+
+<p>- Aquesta funció, anomenada <b>"sailor_final_location"</b>, és responsable de determinar la posició inicial del mariner dins de l'àrea de cerca seleccionada.</p>
+<p>- Utilitza la llibreria NumPy per a la selecció aleatòria de les coordenades del mariner dins de la matriu de l'àrea de cerca (ja sigui SA1, SA2 o SA3).</p>
+<p>- Mitjançant la funció <b>"np.random.choice"</b>, es selecciona una posició aleatòria a les dimensions de l'àrea de cerca (amplada i alçada).</p>
+<p>- Posteriorment, es selecciona una àrea de cerca aleatòria utilitzant la funció <b>"random.triangular"</b>, que proporciona un nombre triangular aleatori dins de l'interval proporcionat. Aquest nombre triangular representa la selecció d'una àrea de cerca entre 1 i el nombre total d'àrees disponibles <b>(num_search_areas)</b>.</p>	
+
+
+<br> 
+<h4> ‎ ‎ ‎ 8. Conversió de Coordenades de l'Àrea de Cerca Local a Coordenades del Mapa</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter8.jpg">
+
+<p>- Aquest bloc de codi té com a objectiu convertir les coordenades del mariner, que inicialment estan en l'àrea de cerca local, a coordenades del mapa global.</p>
+<p>- Les variables "x" i "y" són inicialment establertes com les coordenades del mariner dins de l'àrea de cerca local (ja calculades amb la funció <b>"np.random.choice"</b> en la fase anterior).</p>
+<p>- Mitjançant una estructura condicional <b>"if-elif-else"</b>, es decideix a quina àrea de cerca pertanyen les coordenades i, a continuació, es realitza la conversió a les coordenades globals del mapa.</p>	
+<p>- Es guarda la àrea de cerca actual a la variable <b>"self.area_actual"</b> per a ús posterior. Finalment, es retorna un tuple amb les coordenades convertides (x, y) que representen la ubicació inicial del mariner en el mapa global. Aquestes coordenades són essencials per a establir la situació inicial del joc i iniciar la primera cerca.</p>
+
+
+<br> 
+<h4> ‎ ‎ ‎ 9. Càlcul de l'Efectivitat de la Cerca i Execució de la Cerca</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter9.jpg">
+
+<p><b>- "Calc_search_effectiveness:"</b> Aquesta funció és responsable d'establir els valors d'efectivitat de la cerca <b>"(self.sep1, self.sep2, self.sep3)"</b> per a cada àrea de cerca. Aquests valors són decimals aleatoris compresos entre 0.2 i 0.9, que representen l'eficàcia de la cerca en una àrea determinada.</p>
+<p><b>- "Conduct_search:"</b> Aquesta funció simula l'execució d'una cerca en una àrea específica. Rep com a paràmetres el número d'àrea <b>(area_num)</b>, la matriu que representa l'àrea <b>(area_array)</b> i la probabilitat d'efectivitat de la cerca <b>(effectiveness_prob)</b>. Es crea una llista <b>coords</b> amb totes les possibles coordenades dins de l'àrea de cerca. Aquestes coordenades es barregen de manera aleatòria per simular una cerca realista. Es selecciona una proporció d'aquestes coordenades basada en la probabilitat d'efectivitat de la cerca. Es comprova si la ubicació actual del mariner és a la llista de coordenades cercades i si coincideix amb l'àrea en què s'està realitzant la cerca. Es retorna un missatge que indica si el mariner ha estat trobat o no, així com la llista de coordenades cercades.</p>
+
+
+<br> 
+<h4> ‎ ‎ ‎ 10. Revisió i Actualització de Probabilitats d'Objectiu</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter10.jpg">
+
+<p><b>- Càlcul del denominador (denom):</b> Es calcula el denominador necessari per normalitzar les probabilitats. És la suma ponderada de les probabilitats d'objectiu ponderades per l'eficàcia de la cerca en cada àrea.</p>
+<p><b>- Actualització de les probabilitats (self.p1, self.p2, self.p3):</b> Les probabilitats d'objectiu es divideixen per la suma ponderada <b>(denom)</b>. Això assegura que les noves probabilitats sumin sempre a 1, ja que es basen en la probabilitat condicional de trobar el mariner en una àrea específica donada l'eficàcia de la cerca. Aquest procediment segueix la regla de Bayes en la teoria de probabilitats.</p>
+
+
+<br> 
+<h4> ‎ ‎ ‎ 11. Menú d'Opcions de Cerca</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter11.jpg">
+	
+<p>- Aquesta funció és responsable de mostrar el menú d'opcions per a les cerques d'àrea. Cada opció està numerada i es presenta amb una breu descripció. A continuació, es detalla cada opció:</p>
+<p><b>- Sortir (0):</b> Permet finalitzar l'aplicació.</p>
+<p><b>- Cerca àrea 1 dues vegades (1):</b> Realitza dues cerques successives a l'Àrea 1.</p>
+<p><b>- Cerca àrea 2 dues vegades (2):</b> Realitza dues cerques successives a l'Àrea 2.</p>
+<p><b>- Cerca àrea 3 dues vegades (3):</b> Realitza dues cerques successives a l'Àrea 3.</p>
+<p><b>- Cerca àrees 1 i 2 (4):</b> Realitza una cerca simultània a les Àrees 1 i 2.</p>
+<p><b>- Cerca àrees 1 i 3 (5):</b> Realitza una cerca simultània a les Àrees 1 i 3.</p>
+<p><b>- Cerca àrees 2 i 3 (6):</b> Realitza una cerca simultània a les Àrees 2 i 3.</p>
+<p><b>- Començar de nou (7):</b> Reinicia l'aplicació i les cerques.</p>
+
+
+<br> 
+<h4> ‎ ‎ ‎ 12. Aplicació de Cerca i Rescat a la Costa de Python</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter12.jpg">
+
+<p><b>- App = Search('Cape_Python'):</b> Crea una instància de la classe Search amb el nom <b>'Cape_Python'</b>, que representa l'àrea de cerca específica.</p>
+<p><b>- App.draw_map(last_known=(160, 290)):</b> Mostra el mapa base amb l'escala, la darrera ubicació coneguda i les àrees de cerca. En aquest cas, la darrera ubicació coneguda es proporciona com a coordenades (160, 290).</p>
+<p>- Sailor_x, sailor_y = app.sailor_final_location(num_search_areas=3):</b> Obté la ubicació real inicial del mariner desaparegut utilitzant la funció <b>"sailor_final_location"</b>. En aquest exemple, es defineixen tres àrees de cerca <b>(num_search_areas=3)</b>.</p>
+<p>- Es mostren les probabilitats inicials d'objectiu per a cada àrea <b>(P1, P2, P3)</b>. <b>Search_num = 1:</b> Inicialitza el número de cerca a 1.</p>
+<p><b>- Hile True:</b> Inicia un bucle infinit per gestionar les cerques successives.</p>
+<p><b>- App.calc_search_effectiveness():</b> Calcula aleatòriament l'efectivitat de la cerca per a cada àrea.</p>
+<p><b>- Choice = input("Opció: "):</b> Captura la opció seleccionada per l'usuari.</p>
+
+
+<br> 
+<h4> ‎ ‎ ‎ 13. Gestió de les cerques a les primeres àrees designades</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter13.jpg">
+	
+<p><b>- Cerca a l'Àrea 1:</b> Realitza la primera cerca a l'Àrea 1 i obté els resultats i les coordenades, amb segona cerca a l'Àrea 1 amb els mateixos paràmetres. Calcula l'efectivitat actualitzada de l'Àrea 1 mitjançant la unió de les coordenades obtingudes en les dues cerques i normalitzant pel nombre total de píxels a l'Àrea 1.Calcula l'efectivitat actualitzada de l'Àrea 1 mitjançant la unió de les coordenades obtingudes en les dues cerques i normalitzant pel nombre total de píxels a l'Àrea 1.
+Restaura les efectivitats de les altres àrees a zero <b>(app.sep2 = 0 i app.sep3 = 0)</b>.</p>		
+<p><b>- Cerca a l'Àrea 2:</b>Similar a l'opció 1, però es realitzen dues cerques a l'Àrea 2, i l'efectivitat es calcula i actualitza per a aquesta àrea.</p>
+
+
+<br> 
+<h4> ‎ ‎ ‎ 14. Gestió de les cerques a les segones àrees designades</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter14.jpg">	
+	
+<p><b>- Opció "3":</b> Es realitzen dues cerques a l'Àrea 3, i les coordenades cercades es combinen per actualitzar les probabilitats.</p>	
+<p><b>- Opció "4":</b> Es realitza una cerca a l'Àrea 1 i una altra a l'Àrea 2, i les probabilitats per a l'Àrea 3 es posen a zero.</p>	
+<p><b>- Opció "5":</b> Es realitza una cerca a l'Àrea 1 i una altra a l'Àrea 3, i les probabilitats per a l'Àrea 2 es posen a zero.</p>
+
+
+<br> 
+<h4> ‎ ‎ ‎ 15. Gestió de les cerques a les terceres àrees designades</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter15.jpg">
+
+<p><b>- Opció "6":</b> Es realitza una cerca a l'Àrea 2 i una altra a l'Àrea 3, i les probabilitats per a l'Àrea 1 es posen a zero.</p>
+<p><b>- Opció "7":</b> Es reinicia el joc cridant la funció main(), tornant a la configuració inicial.</b></p>
+
+
+<br> 
+<h4> ‎ ‎ ‎ 16. Actualitzar probabilitats de Bayes</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter16.jpg">
+
+<p>- Després de gestionar l'opció de l'usuari, es crida a la funció <b>"revise_target_probs()"</b> per actualitzar les probabilitats basades en la regla de Bayes. Posteriorment, es mostren els resultats de la cerca i la seva efectivitat. Aquesta secció destaca com les probabilitats es reajusten després de cada cerca, proporcionant una visió detallada del progrés del joc i com les decisions de l'usuari influeixen en les probabilitats finals.</p>
+
+
+<br> 
+<h4> ‎ ‎ ‎ 17. Actualització de Probabilitats i Visualització dels Resultats</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter17.jpg">
+
+<p>- En aquesta secció, es decideix el comportament del programa després de cada cerca. Si el mariner no és trobat en les àrees seleccionades, es mostren les noves probabilitats d'objectiu (P) per a la següent cerca. </p>
+<p>- En cas contrari, si el mariner és trobat, es mostra la seva posició i el programa es reinicia per a una nova cerca. A més, es presenta el número de cerca actualitzat per al següent cicle del bucle. Aquesta part del codi assegura la continuïtat i evolució del joc en funció de les decisions de l'usuari i els resultats de les cerques.</p>
+	
+
+
+<br> 
+<h4> ‎ ‎ ‎ 18. Inicialització del Joc, Cerques i Presentació de Probabilitats Inicials</h4>
+    
+<div class="img-center">   
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter18.jpg">
+
+<p>- En aquesta secció inicial del joc, es realitza la inicialització amb les àrees de cerca i les probabilitats d'objectiu predeterminades. Després de mostrar les probabilitats inicials, es presenta el primer menú d'opcions per a les cerques d'àrea.</p> 
+<p>- L'usuari té l'opció de seleccionar diferents estratègies de cerca, com cercar dues vegades en una àrea específica o cercar en diverses àrees simultàniament. El codi finalitza amb un missatge indicant el final del joc i l'estat de sortida del programa.</p>
+
+	
+<br>
+<h6> ‎ ‎ ‎ Aquest codi demostra com la inferència bayesiana pot ser aplicada en temps real, adaptant-se a les decisions de l'usuari i oferint una experiència educativa.</h6>
+<h6> ‎ ‎ ‎ La interactivitat del joc il·lustra com les actualitzacions de probabilitats reflecteixen la informació recopilada i com les estratègies de cerca poden afectar les estimacions  ‎ ‎ ‎   ‎  ‎ ‎  ‎ ‎ ‎   ‎  ‎ ‎  ‎ ‎ ‎ ‎ ‎d'objectiu.</h6>
+<h6> ‎ ‎ ‎ En resum, el joc proporciona una manera pràctica de comprendre els fonaments de la inferència bayesiana en el context de cerques i rescat.</h6>
+	
+	
+<br>
+<br>
+<br>
+
+	
+    
+</div>
+    <footer class="page-footer blue">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Álvarez</h5>
+            <p class="grey-text text-lighten-4">................................................................................</p>
+              </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+	      <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons-Licentie" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> .............................................................................................................................................................................................................
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+      
