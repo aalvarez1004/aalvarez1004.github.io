@@ -1,1 +1,25 @@
+import numpy as np
+import matplotlib.pyplot as plt
 
+# Datos de ejemplo
+direcciones = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
+frecuencias = [0.1, 0.15, 0.08, 0.12, 0.11, 0.2, 0.13, 0.11]
+
+# Crear una figura y un conjunto de subtramas
+fig, ax = plt.subplots(figsize=(8, 8), subplot_kw=dict(polar=True))
+
+# Convertir las direcciones a radianes
+radianes = np.linspace(0, 2*np.pi, len(direcciones)+1)
+
+# Crear una rosa de vientos
+bars = ax.bar(radianes[:-1], frecuencias, width=0.8, bottom=0.0, color='b', alpha=0.5)
+
+# Establecer las etiquetas de las direcciones
+ax.set_xticks(radianes[:-1])
+ax.set_xticklabels(direcciones)
+
+# Establecer el título
+ax.set_title('Frecuencia de cuentas por dirección del viento (%)')
+
+# Mostrar el gráfico
+plt.show()
