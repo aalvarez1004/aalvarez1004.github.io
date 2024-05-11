@@ -80,7 +80,7 @@ img {
     
 <br>
     
-<h4> ‎ ‎ ‎ ‎- Graphic Time Variation (Air pollution in Mataró)</h4>
+<h4> ‎ ‎ ‎ ‎- Graphic Time Variation (Air pollution in Mataró):</h4>
 <br>    
 <div class="img-center">   
 <img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/GraphicTimeVariation.jpg">
@@ -162,7 +162,7 @@ For example, if we look at the year 2000, we can see that there is a higher conc
 
 
 <br> 
-<h4> ‎ ‎ ‎ 6. Ozone (Trioxygen) (O3) </h4>
+<h4> ‎ ‎ ‎ 6. Ozone (Trioxygen) evolution (O3) </h4>
 <br>    
 <div class="img-center">   
 <img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/trendlevelO3.jpg">
@@ -173,40 +173,48 @@ For example, if we look at the year 2000, we can see that there is a higher conc
 <p>- Horizontal axis (X): It represents the years, which go from 1999 to 2023. This allows us to see how the concentration of trioxide has changed over time.</p>
 <p>- Vertical axis (Y): Represents different times of the day, ranging from 00:00 to 21:00. This allows us to see how the concentration of trioxygen varies at different times of the day.</p>
 <p>- Colors: Represent the average concentration of trioxygen. The light shades indicate low concentrations and the green shades indicate high concentrations. There is a scale on the right that shows the correspondence between the colors and the concentrations of trioxide.</p>
-<p>Now, if we look at some specific details of the image, we can see that there are some areas with more reddish colors, which indicate high concentrations of trioxide. These zones are mainly found around the midday in the years around 2000 and 2010. This could indicate that there have been periods of time during these years when the concentration of trioxigen in Mataró has been particularly high.</p>
+<p>- Now, if we look at some specific details of the image, we can see that there are some areas with more reddish colors, which indicate high concentrations of trioxide. These zones are mainly found around the midday in the years around 2000 and 2010. This could indicate that there have been periods of time during these years when the concentration of trioxigen in Mataró has been particularly high.</p>
 
 <br> 
-<h4> ‎ ‎ ‎ 7. Conversió de Coordenades de l'Àrea de Cerca Local a Coordenades del Mapa</h4>
+<h4> ‎ ‎ ‎ 7. Sulfur Dioxide evolution (S02) </h4>
 <br>
 <div class="img-center">   
-<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter8.jpg">
+<img style = "height: 100%;" src="aalvarez1004.github.io/Programació/ImatgesProgramació/trendlevelSO2.jpg">
+<img style = "height: 100%;" src="aalvarez1004.github.io/Programació/ImatgesProgramació/SO2Evolution.png">
 
-<p>- Aquest bloc de codi té com a objectiu convertir les coordenades del mariner, que inicialment estan en l'àrea de cerca local, a coordenades del mapa global.</p>
-<p>- Les variables "x" i "y" són inicialment establertes com les coordenades del mariner dins de l'àrea de cerca local (ja calculades amb la funció <b>"np.random.choice"</b> en la fase anterior).</p>
-<p>- Mitjançant una estructura condicional <b>"if-elif-else"</b>, es decideix a quina àrea de cerca pertanyen les coordenades i, a continuació, es realitza la conversió a les coordenades globals del mapa.</p>	
-<p>- Es guarda la àrea de cerca actual a la variable <b>"self.area_actual"</b> per a ús posterior. Finalment, es retorna un tuple amb les coordenades convertides (x, y) que representen la ubicació inicial del mariner en el mapa global. Aquestes coordenades són essencials per a establir la situació inicial del joc i iniciar la primera cerca.</p>
+	
 
-
+<p>- This graph shows the evolution of sulphur dioxide (SO2) in Mataró from 1999 to 2023. Here is a detailed analysis:</p>
+<p><b>1. General trend:</b> The graph shows a significant decrease in SO2 levels over the years. This trend indicates that measures to control and reduce pollution have been effective.</p>
+<p><b>2. Years with high SO2 levels:</b> It can be observed that around the year 2000, SO2 levels were higher, with concentrations reaching their maximum around 15 µg/m3.</p>	
+<p><b>3. Remarkable reduction since 2008:</b> Since 2008, there has been a remarkable reduction in the concentration of SO2. Although there are occasional fluctuations where levels increase slightly, as seen in 2017, the general trend is a steady decrease.</p>
+<p><b>4. Monthly variability:</b> Monthly variability also seems to have decreased; extreme fluctuations are less common in recent years.</p>
+<p><b>5. Colors of the graph:</b> The darker colors indicate lower levels of the pollutant, while the lighter colors (towards green) indicate higher concentrations of SO2.</p>
+	
 <br> 
-<h4> ‎ ‎ ‎ 9. Càlcul de l'Efectivitat de la Cerca i Execució de la Cerca</h4>
-    
+<h4> ‎ ‎ ‎ 8. Polystyrene evolution (Ps) </h4>
+<br>    
 <div class="img-center">   
-<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter9.jpg">
-
-<p><b>- "Calc_search_effectiveness:"</b> Aquesta funció és responsable d'establir els valors d'efectivitat de la cerca <b>"(self.sep1, self.sep2, self.sep3)"</b> per a cada àrea de cerca. Aquests valors són decimals aleatoris compresos entre 0.2 i 0.9, que representen l'eficàcia de la cerca en una àrea determinada.</p>
-<p><b>- "Conduct_search:"</b> Aquesta funció simula l'execució d'una cerca en una àrea específica. Rep com a paràmetres el número d'àrea <b>(area_num)</b>, la matriu que representa l'àrea <b>(area_array)</b> i la probabilitat d'efectivitat de la cerca <b>(effectiveness_prob)</b>. Es crea una llista <b>coords</b> amb totes les possibles coordenades dins de l'àrea de cerca. Aquestes coordenades es barregen de manera aleatòria per simular una cerca realista. Es selecciona una proporció d'aquestes coordenades basada en la probabilitat d'efectivitat de la cerca. Es comprova si la ubicació actual del mariner és a la llista de coordenades cercades i si coincideix amb l'àrea en què s'està realitzant la cerca. Es retorna un missatge que indica si el mariner ha estat trobat o no, així com la llista de coordenades cercades.</p>
-
-
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/trendlevelPS.jpg">
+<br>
+<p>- Here is the evolution of polystyrene in Mataró from 1999 to 2007. </p>
+<p><b>1. High concentration period (1999-2001):</b> The levels of polystyrene were highest between 1999 and 2001. This high concentration can be seen in the darker colors of the graph, which indicate higher levels of polystyrene. These fossilized colors can be observed mainly in the winter months during these first years.</p>
+<p><b>2. Significant reduction:</b> From 2001 onwards, the levels of polystyrene decreased significantly and remained low. This decrease can be seen in the lighter colors of the graph. This drastic reduction indicates that there was probably a significant change or intervention around 2001.</p>
+<p><b>3. Missing data (after 2001):</b> The following year, 2002, we can no longer find data available for subsequent years until the end of 2023 in this graph. They appear as blank spaces in the graph.</p>
+<p>Therefore, it can be concluded that there has been a significant reduction in the levels of polystyrene in Mataró since 2001. We have very little data on Polystyrene (only 3 years), so it is very complicated to make a graph to compare and analyze it.</p>
+	
 <br> 
-<h4> ‎ ‎ ‎ 10. Revisió i Actualització de Probabilitats d'Objectiu</h4>
-    
+<h4> ‎ ‎ ‎ 9. Hydrochlorothiazide evolution (HCT) </h4>
+<br>    
 <div class="img-center">   
-<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/Chapter10.jpg">
+<img style = "height: 100%;" src="https://aalvarez1004.github.io/Programació/ImatgesProgramació/trendlevelHCT.jpg">
 
-<p><b>- Càlcul del denominador (denom):</b> Es calcula el denominador necessari per normalitzar les probabilitats. És la suma ponderada de les probabilitats d'objectiu ponderades per l'eficàcia de la cerca en cada àrea.</p>
-<p><b>- Actualització de les probabilitats (self.p1, self.p2, self.p3):</b> Les probabilitats d'objectiu es divideixen per la suma ponderada <b>(denom)</b>. Això assegura que les noves probabilitats sumin sempre a 1, ja que es basen en la probabilitat condicional de trobar el mariner en una àrea específica donada l'eficàcia de la cerca. Aquest procediment segueix la regla de Bayes en la teoria de probabilitats.</p>
+<p>Analyzing the graph provided, it is possible to observe a visual representation of the concentration of hydrochlorothiazide in Mataró over a period of time. A more in-depth analysis of this information is presented below:</p>
+<p><b>1. High concentration period (1999-2001):</b> The levels of hydrochlorothiazide were highest between 1999 and 2001. This high concentration can be seen in the darker colors of the graph, which indicate higher levels of hydrochlorothiazide. These darker colors can be observed mainly in the winter months during these first years. This decrease can be seen in the lighter colors of the graph. This drastic reduction indicates that there was probably a significant change or intervention around 2001.</p>
+<p><b>2. No data available (after 2000):</b>From the middle of the year 2000, the levels of hydrochlorothiazide decreased significantly, remaining low and it could be said that there is no data available for the years after 2001 in this graph. They appear as blank spaces in the graph indicating that no data are available or have not yet been recorded for these years.</p>
+<p>- It can be concluded that there has been a variation in the levels of hydrochlorothiazide in Mataró from 1999 to 2001. For a complete and detailed analysis, it would be essential to have access to more data to understand the current and future trends, with the data we have from only 2 years it is very difficult to make a graph because it is too short and it is not useful to make many conclusions.</p>
 
-
+	
 <br> 
 <h4> ‎ ‎ ‎ 11. Menú d'Opcions de Cerca</h4>
     
