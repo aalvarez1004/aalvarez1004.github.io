@@ -3,228 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quadre-esquema pronominalització de CD</title>
+<title>Creative Blog Template</title>
 <style>
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    background-color: #f5f5f5;
+    padding: 0;
+    background-color: #f9f9f9;
   }
   header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-  }
-  nav {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-  }
-  nav a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-  }
-  nav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  main {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff4081;
+  }
+  header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  header nav a:hover {
+    color: #ff4081;
+  }
+  .hero {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+  .hero h1 {
+    font-size: 2.5em;
+    color: #333;
+  }
+  .hero p {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  .hero .buttons {
+    margin-top: 20px;
+  }
+  .hero .buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid #ff4081;
+    color: #ff4081;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  .hero .buttons a:hover {
+    background-color: #ff4081;
+    color: #fff;
+  }
+  .section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .section .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
   }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-  }
-  th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
+  .section .card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    flex: 1;
+    max-width: 300px;
     text-align: left;
   }
-  th {
-    background-color: #4CAF50;
-    color: white;
-  }
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  tr:hover {
-    background-color: #ddd;
-  }
-  td {
-    transition: background-color 0.5s ease;
-  }
-  td:hover {
-    background-color: #ffeb3b;
-  }
-  .mindmap {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-  .node {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    margin: 10px;
+  .section .card img {
+    max-width: 100%;
     border-radius: 10px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
   }
-  .node:hover {
-    background-color: #ffeb3b;
-    transform: scale(1.1);
+  .section .card h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px;
   }
-  .connector {
-    border-left: 2px solid #4CAF50;
-    margin: 0 10px;
-  }
-  .subnode {
-    background-color: #2196F3;
-    color: white;
-    padding: 8px;
-    margin: 5px;
-    border-radius: 8px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  .subnode:hover {
-    background-color: #ffeb3b;
-    transform: scale(1.1);
+  .section .card p {
+    color: #666;
+    margin-top: 10px;
+    font-size: 0.9em;
   }
   footer {
     background-color: #333;
-    color: white;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Quadre-esquema pronominalització de CD</h1>
-  <h2>Fet per: Alexis Álvarez Navas - 1r.Batx F</h2>
+  <div class="logo">StoryHub</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<nav>
-  <a href="#home">Inici</a>
-  <a href="#cd">Complement Directe</a>
-  <a href="#ci">Complement Indirecte</a>
-  <a href="#mapa-mental">Mapa Mental</a>
-  <a href="#contacte">Contacte</a>
-</nav>
+<section class="hero">
+  <h1>Creative Blog Template powered by Gatsby JS.</h1>
+  <p>Build your blazing fast blog powered by React JS, Gatsby JS and TypeScript. Fast in every way that matters...</p>
+  <div class="buttons">
+    <a href="#buy">Buy Now</a>
+    <a href="#demos">Explore Demos</a>
+  </div>
+</section>
 
-<main>
-  <section id="cd">
-    <h2>Complement Directe (CD)</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Tipus de CD</th>
-          <th>Pronom que el substitueix</th>
-          <th>Exemple</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Determinat (amb article, demostratiu o possessiu)</td>
-          <td>EL, LA, ELS, LES</td>
-          <td>Veig el nen: El veig.</td>
-        </tr>
-        <tr>
-          <td>Indeterminat (sense article, demostratiu o possessiu, o amb quantificador nominal numeral, indefinit o quantitatiu)</td>
-          <td>EN</td>
-          <td>Busca bolets: En busca.</td>
-        </tr>
-        <tr>
-          <td>Neutre (representat per això, allò o una oració subordinada)</td>
-          <td>HO</td>
-          <td>Em dius això o no?: M'ho dius o no?</td>
-        </tr>
-        <tr>
-          <td>Referència a la 1a o a la 2a persona, o reflexiu</td>
-          <td>EM, ENS, ET, US, ES</td>
-          <td>La Laura em pentina.</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section id="ci">
-    <h2>Complement Indirecte (CI)</h2>
-    <p>El Complement Indirecte (CI) en català es caracteritza per anar precedit de la preposició "a" i mai no admet la passivització. Els pronoms febles que substitueixen el CI són "LI" per al singular i "ELS" per al plural.</p>
-    <p>Exemples:</p>
-    <ul>
-      <li>Va donar les notes al pare: <strong>Li va donar les notes.</strong></li>
-      <li>Portava flors als malalts: <strong>Els portava flors.</strong></li>
-    </ul>
-  </section>
-
-  <section id="mapa-mental">
-    <h2>Mapa Mental: Complement Directe (CD) i Complement Indirecte (CI)</h2>
-    <div class="mindmap">
-      <div class="node">Complement Directe (CD)
-        <div class="subnode">Tipus de CD
-          <div class="subnode">Determinat
-            <div class="subnode">Pronom: EL, LA, ELS, LES</div>
-            <div class="subnode">Exemple: Veig el nen: El veig.</div>
-          </div>
-          <div class="subnode">Indeterminat
-            <div class="subnode">Pronom: EN</div>
-            <div class="subnode">Exemple: Busca bolets: En busca.</div>
-          </div>
-          <div class="subnode">Neutre
-            <div class="subnode">Pronom: HO</div>
-            <div class="subnode">Exemple: Em dius això o no?: M'ho dius o no?</div>
-          </div>
-          <div class="subnode">Referència Personal o Reflexiu
-            <div class="subnode">Pronom: EM, ENS, ET, US, ES</div>
-            <div class="subnode">Exemple: La Laura em pentina.</div>
-          </div>
-        </div>
-      </div>
-      <div class="connector"></div>
-      <div class="node">Complement Indirecte (CI)
-        <div class="subnode">Característiques
-          <div class="subnode">Va precedit per la preposició "a"</div>
-          <div class="subnode">No admet la passivització</div>
-          <div class="subnode">Exemple: Els pastissos de xocolata agraden a tothom.</div>
-        </div>
-        <div class="subnode">Pronoms que el substitueixen
-          <div class="subnode">Singular: LI</div>
-          <div class="subnode">Plural: ELS</div>
-          <div class="subnode">Exemples:
-            <div class="subnode">Va donar les notes al pare: Li va donar les notes.</div>
-            <div class="subnode">Portava flors als malalts: Els portava flors.</div>
-          </div>
-        </div>
-      </div>
+<section class="section" id="features">
+  <div class="content">
+    <div class="card">
+      <img src="https://via.placeholder.com/300" alt="Feature 1">
+      <h3>Feature One</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu aliquet, elementum nisi quis, condimentum nibh.</p>
     </div>
-  </section>
-</main>
+    <div class="card">
+      <img src="https://via.placeholder.com/300" alt="Feature 2">
+      <h3>Feature Two</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu aliquet, elementum nisi quis, condimentum nibh.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300" alt="Feature 3">
+      <h3>Feature Three</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu aliquet, elementum nisi quis, condimentum nibh.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="content">
+    <h2>About Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu aliquet, elementum nisi quis, condimentum nibh. Suspendisse a libero eu magna eleifend convallis. Mauris id scelerisque elit, a fermentum magna.</p>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="content">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, feel free to reach out to us!</p>
+    <p>Email: example@example.com</p>
+  </div>
+</section>
 
 <footer>
-  <p>Contacte: alexis.alvarez.navas@example.com</p>
+  <p>&copy; 2024 StoryHub. All Rights Reserved.</p>
 </footer>
-
-<script>
-  document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-</script>
 
 </body>
 </html>
