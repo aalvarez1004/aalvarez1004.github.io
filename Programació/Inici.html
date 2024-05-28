@@ -20,25 +20,34 @@
           <ul id="nav-mobile" class="right hide-on-med-and-down">
 
             
-  <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Games
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="https://aalvarez1004.github.io/Programació/games/2048/index.html">2048</a>
-        <a class="dropdown-item" href="https://aalvarez1004.github.io/Programació/Snake/inici.html">Snake</a>
-        </div>
-       </li>     
-               <li><a href="httpa://aalvarez1004.github.io/Programació/Greeting.html"> Treball Greeting</a></li>
-               <li><a href="https://aalvarez1004.github.io/Programació/horari.html">Horari</a></li>
-               <li><a href="https://aalvarez1004.github.io/Programació/ExamQuiz.html">Exam Quiz</a></li>
-               <li><a href="https://aalvarez1004.github.io/Programació/Chapter1Python.html">Projecte Cap.1 (Phyton)</a></li>
-               <li><a href="https:***TREUREAIXÒ***//aalvarez1004.github.io/"> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  Inici‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  <!-- Inici (text transparent per això hi ha un espai) --></a></li>
-         
-          </ul>
-        </div>
-      </nav>
-    </div>
+<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Games<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a href="https://aalvarez1004.github.io/Programació/Greeting.html">Treball Greeting</a></li>
+          <li><a href="https://aalvarez1004.github.io/Programació/horari.html">Horari</a></li>
+          <li><a href="https://aalvarez1004.github.io/Programació/ExamQuiz.html">Exam Quiz</a></li>
+          <li><a href="https://aalvarez1004.github.io/Programació/Chapter1Python.html">Projecte Cap.1 (Python)</a></li>
+          <li><a href="https://aalvarez1004.github.io/">            Inici‎            <!-- Inici (text transparent per això hi ha un espai) -->
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Dropdown Structure -->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="https://aalvarez1004.github.io/Programació/games/2048/index.html">2048</a></li>
+    <li><a href="https://aalvarez1004.github.io/Programació/Snake/inici.html">Snake</a></li>
+  </ul>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.dropdown-trigger');
+      var instances = M.Dropdown.init(elems, {
+        coverTrigger: false
+      });
+    });
+  </script>
+
     
       <h1>Apartat de programació</h1>
 
