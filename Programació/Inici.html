@@ -8,6 +8,7 @@
     <!-- Materialze - Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
      <style>
+ <style>
     .nav-wrapper ul li a {
       margin-right: 15px; /* Ajusta este valor según sea necesario */
     }
@@ -17,6 +18,7 @@
     .dropdown-content li>a, .dropdown-content li>span {
       color: black !important; /* Asegura que el texto del dropdown sea negro */
       display: block; /* Hace que el enlace sea un bloque para cubrir todo el área */
+      padding: 10px 15px; /* Ajusta el padding para cubrir cualquier espacio */
     }
     .dropdown-content li:hover {
       background-color: #e0e0e0; /* Cambia el color de fondo de los elementos del dropdown al hacer hover */
@@ -47,26 +49,29 @@
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
-            <a class="dropdown-trigger" href="#" data-target="dropdown1">Games></a>
+            <a class="dropdown-trigger" href="#" data-target="dropdown1">Games<i class="material-icons right">arrow_drop_down</i></a>
           </li>
-                <a href="#introduccio" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Introducció</a>
-      <a href="#materials-metodes" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Materials i mètodes</a>
-      <div class="relative">
-     
           <li><a href="https://aalvarez1004.github.io/Programació/Greeting.html">Treball Greeting</a></li>
           <li><a href="https://aalvarez1004.github.io/Programació/horari.html">Horari</a></li>
           <li><a href="https://aalvarez1004.github.io/Programació/ExamQuiz.html">Exam Quiz</a></li>
           <li><a href="https://aalvarez1004.github.io/Programació/Chapter1Python.html">Projecte Cap.1 (Python)</a></li>
-          <li><a href="https://aalvarez1004.github.io/">              ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  Inici‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎                <!-- Inici (text transparent per això hi ha un espai) -->
-            
-            
-        
+          <li>
+            <a href="https://aalvarez1004.github.io/">              ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  Inici‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎                <!-- Inici (text transparent per això hi ha un espai) -->
             </a>
           </li>
         </ul>
       </div>
     </nav>
   </div>
+
+  <!-- Dropdown Structure -->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="https://aalvarez1004.github.io/Programació/games/2048/index.html">2048</a></li>
+    <li><a href="https://aalvarez1004.github.io/Programació/Snake/inici.html">Snake</a></li>
+  </ul>
+
+</body>
+</html>
 
     
       <h1> - Apartat de programació</h1>
