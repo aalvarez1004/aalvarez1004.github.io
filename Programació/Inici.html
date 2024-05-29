@@ -10,10 +10,10 @@
      <style>
  <style>
     .nav-wrapper ul li a {
-      margin-right: 15px; /* Ajusta este valor según sea necesario */
+      margin-right: 20px; /* Espacio entre los enlaces */
     }
-    .nav-wrapper ul li:last-child a {
-      margin-right: 30px; /* Espacio extra para el último elemento */
+    .nav-wrapper ul li a.inici {
+      padding-left: 40px; /* Espacio adicional para "Inici" */
     }
     .dropdown-content li>a, .dropdown-content li>span {
       color: black !important; /* Asegura que el texto del dropdown sea negro */
@@ -56,7 +56,7 @@
         <li><a href="https://aalvarez1004.github.io/Programació/horari.html">Horari</a></li>
         <li><a href="https://aalvarez1004.github.io/Programació/ExamQuiz.html">Exam Quiz</a></li>
         <li><a href="https://aalvarez1004.github.io/Programació/Chapter1Python.html">Projecte Cap.1 (Python)</a></li>
-        <li><a href="https://aalvarez1004.github.io/">Inici</a></li>
+        <li><a href="https://aalvarez1004.github.io/" class="inici">Inici</a></li>
       </ul>
     </div>
   </nav>
@@ -73,7 +73,9 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
-    var instances = M.Dropdown.init(elems);
+    var instances = M.Dropdown.init(elems, {
+      coverTrigger: false // Ajuste para que el dropdown no cubra el trigger
+    });
   });
 </script>
 
