@@ -9,15 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Material Design Icons -->
   <style>
+<style>
     .nav-wrapper ul li a {
       margin-right: 15px; /* Ajusta este valor según sea necesario */
     }
     .nav-wrapper ul li:last-child a {
       margin-right: 30px; /* Espacio extra para el último elemento */
-    }
-    .dropdown-trigger:hover, .dropdown-trigger:focus {
-      background-color: transparent; /* Quita el fondo al hacer hover o focus */
-      box-shadow: none; /* Quita la sombra al hacer hover o focus */
     }
     .dropdown-content li>a, .dropdown-content li>span {
       color: black !important; /* Asegura que el texto del dropdown sea negro */
@@ -28,11 +25,20 @@
       box-shadow: none; /* Quita cualquier sombra adicional */
     }
   </style>
-    
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.dropdown-trigger');
+      var instances = M.Dropdown.init(elems, {
+        coverTrigger: false, // Asegura que el dropdown no cubra el elemento desencadenante
+        constrainWidth: false // Permite que el ancho del dropdown se ajuste al contenido
+      });
+    });
+  </script>
+
   </head>
   <body>
-      <div class="navbar-fixed">
+  <div class="navbar-fixed">
     <nav class="blue">
       <div class="nav-wrapper">
         <a href="https://aalvarez1004.github.io/AAN/inici.html" class="brand-logo">
@@ -40,16 +46,14 @@
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
-            <a class="dropdown-trigger" href="#!" data-target="dropdown1">Games<i class="material-icons right">arrow_drop_down</i></a>
+            <a class="dropdown-trigger" href="#" data-target="dropdown1">Games<i class="material-icons right">arrow_drop_down</i></a>
           </li>
           <li><a href="https://aalvarez1004.github.io/Programació/Greeting.html">Treball Greeting</a></li>
           <li><a href="https://aalvarez1004.github.io/Programació/horari.html">Horari</a></li>
           <li><a href="https://aalvarez1004.github.io/Programació/ExamQuiz.html">Exam Quiz</a></li>
           <li><a href="https://aalvarez1004.github.io/Programació/Chapter1Python.html">Projecte Cap.1 (Python)</a></li>
           <li>
-            <a href="https://aalvarez1004.github.io/">
-              ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  Inici‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  
-              <!-- Inici (text transparent per això hi ha un espai) -->
+            <a href="https://aalvarez1004.github.io/">              ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  Inici‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎                <!-- Inici (text transparent per això hi ha un espai) -->
             </a>
           </li>
         </ul>
@@ -62,17 +66,6 @@
     <li><a href="https://aalvarez1004.github.io/Programació/games/2048/index.html">2048</a></li>
     <li><a href="https://aalvarez1004.github.io/Programació/Snake/inici.html">Snake</a></li>
   </ul>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.dropdown-trigger');
-      var instances = M.Dropdown.init(elems, {
-        coverTrigger: false, // Asegura que el dropdown no cubra el elemento desencadenante
-        constrainWidth: false // Permite que el ancho del dropdown se ajuste al contenido
-      });
-    });
-  </script>
-
     
       <h1> - Apartat de programació</h1>
 
