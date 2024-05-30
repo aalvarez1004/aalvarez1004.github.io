@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The web site of alopez302</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+  <body>
+    <h1>Css</h1>
+
+    <p id="paragraf1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis hendrerit quam, non tristique lectus consectetur sed. Etiam ultricies nisi id eros tempor, id maximus est ornare. Ut sed neque in leo finibus bibendum fermentum non nisl. Suspendisse potenti. Maecenas arcu purus, mattis vel dignissim sed, pulvinar scelerisque odio. Vestibulum vel lectus eros. Sed at enim fringilla, consectetur ex quis, scelerisque nulla. Praesent a mauris nec felis lacinia mollis. Suspendisse imperdiet felis eget nisl dignissim accumsan quis non tortor. Donec nec orci vel tellus interdum ultrices. Suspendisse nisl velit, lacinia sit amet diam nec, posuere sodales libero. Donec at augue venenatis eros maximus mollis ultricies sit amet dui. Praesent in aliquam ipsum, at euismod purus.</p>
+    
+    <p id="paragraf2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis hendrerit quam, non tristique lectus consectetur sed. Etiam ultricies nisi id eros tempor, id maximus est ornare. Ut sed neque in leo finibus bibendum fermentum non nisl. Suspendisse potenti. Maecenas arcu purus, mattis vel dignissim sed, pulvinar scelerisque odio. Vestibulum vel lectus eros. Sed at enim fringilla, consectetur ex quis, scelerisque nulla. Praesent a mauris nec felis lacinia mollis. Suspendisse imperdiet felis eget nisl dignissim accumsan quis non tortor. Donec nec orci vel tellus interdum ultrices. Suspendisse nisl velit, lacinia sit amet diam nec, posuere sodales libero. Donec at augue venenatis eros maximus mollis ultricies sit amet dui. Praesent in aliquam ipsum, at euismod purus.</p>
+
+ <h2>Icones</h2>
+    <p>Icones creades amb la biblioteca JavaScript Font Awesome</p>
+    <i class="fa-solid fa-car fa-bounce fa-2xl"></i>
+    
+     <h1>Css exemples amb colors</h1>
+    <p>Aquest és un exemple de com utilitzar CSS per estilitzar una pàgina web.</p>
+    <p>Tingueu en compte les propietats CSS comunes com <a href="#">colors</a>, <a href="#">marges</a>, i <a href="#">fonts</a>.</p>
+    <button class="btn">Clic aquí</button>
+    <p class="destacat">Aquest text està destacat.</p>
+    
+<p id="p1">Aquest és el primer paràgraf.</p>
+<p id="p2">Aquest és el segon paràgraf.</p>
+<p id="p3">Aquest és el tercer paràgraf.</p>
+<p id="p4">Aquest és el quart paràgraf.</p>
+<p id="p5">Aquest és el cinquè paràgraf.</p>
+<p id="p6">Aquest és el sisè paràgraf.</p>
+<p id="p7">Aquest és el setè paràgraf.</p>
+<p id="p8">Aquest és el vuitè paràgraf.</p>
+<p id="p9">Aquest és el novè paràgraf.</p>
+<p id="p10">Aquest és el desè paràgraf.</p>
+
+
+
+
+
+  <h1 id="h-1">Aquest és un exemple d'unitats de mida CSS</h1>
+  <h2 id="h-2">Exemple d'unitats relatives</h2>
+  <p id="p11">
+    Les unitats relatives s'ajusten al context i les unitats absolutes són fixes.
+  </p>
+
+ <h1>Exemples de Colors RGB amb CSS</h1>
+
+    <div class="color-exemple1" style="width: 100px; height: 100px;">
+        <p class="text">rgb(255, 0, 0) - Vermell</p>
+    </div>
+
+    <div class="color-exemple2" style="width: 100px; height: 100px;">
+        <p class="text">rgb(0%, 128%, 0%) - Verd</p>
+    </div>
+
+    <div class="color-exemple3" style="width: 100px; height: 100px;">
+        <p class="text">#0000FF - Blau</p>
+    </div>
+
+    <div class="color-exemple4" style="width: 100px; height: 100px;">
+        <p class="text">#FF00FF - Magenta</p>
+    </div>
+    
+    <p>El color es pot definir en molts espais de color, per exemple:</p>
+    <ul>
+    <li>El <b>RGB</b> (Red, Green, Blue)</li>
+    <li>El <b>CMYK</b> (Cian, Magenta, Yellow, Black), que és el que utilitzen les impressores.</li> 
+    <li>Després hi ha el espai de color <b>HSL</b> (Hue = "matis", Saturation = "saturació", Luminance = "lluminància")</li>
+    <li>El espai de color <b>HSV</b>, semblant a l'anterior, però la V vol dir (Valor/Brillantor),</li>
+    <li>L'últim és el <b>CIELab</b>, on L és la lluminositat començant per negre i acabant en blanc, i A va de vermell a verd, b va de blau a a groc, (photoshop i pdf utilitza aquest).</li>
+    </ul>
+    
+    
+    <p>Per exemple en l'espai RGB podem tenir:</p>
+    <ul>
+    <li>Un sol número decimal, i estem a l'escala de grisos de 0 a 255, en que 0 seria negre, i 255 blanc.</li> 
+    <li>Si tenim dos números el primer número és l'escala de grisos i el segon és la transparència o canal alpha.</li> 
+    <li>Si tenim tres números són Red, Green & Blue, és a dir 256 (de 0 a 255) intensitats de vermell per 256 intensitats de verd, per 256 intensitats de blau = 16000000 de colors diferents.</li>
+    </ul>
+    
+    <img src="color.png">
+    
+    <p></p>
+    
+  </body>
+</html>
